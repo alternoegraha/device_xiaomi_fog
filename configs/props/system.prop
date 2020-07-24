@@ -70,7 +70,6 @@ ro.lmk.swap_free_low_percentage=15
 # Media
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
-debug.stagefright.omx_default_rank.sw-audio=1
 media.aac_51_output_enabled=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 media.stagefright.enable-aac=true
