@@ -15,6 +15,10 @@ dontaudit {
 # why would a script want to access rootfs?
 dontaudit vendor_wcnss_service rootfs:dir { open read };
 
+# Apps are no longer allowed open access to /dev/ashmem, unless they
+# target API level < Q.
+dontaudit untrusted_app ashmem_device:chr_file open;
+
 # untrusted_app shouldn't be allowed to read SELinux status
 dontaudit untrusted_app_all selinuxfs:file read;
 
