@@ -33,6 +33,9 @@ bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 bluetooth.profile.vcp.controller.enabled?=true
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # Low memory killer daemon
 ro.lmk.filecache_min_kb=300000
 ro.lmk.kill_heaviest_task=true
