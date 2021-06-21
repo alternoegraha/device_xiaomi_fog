@@ -683,10 +683,9 @@ service profiler_daemon /system/bin/profiler_daemon
     group root
     disabled
 
-service charger /system/bin/chargeonlymode
+service charger /system/bin/charger
     class charger
-    user system
-    group system graphics input
+    group system graphics
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
 
