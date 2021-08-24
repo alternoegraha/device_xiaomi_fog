@@ -143,7 +143,6 @@ debug.sf.treat_170m_as_sRGB=1
 persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
 ro.surface_flinger.enable_frame_rate_override=false
-ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.max_virtual_display_dimension=4096
