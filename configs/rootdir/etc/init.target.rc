@@ -150,6 +150,7 @@ on boot
 on property:sys.boot_completed=1
     rm /data/unencrypted/zram_swap
     swapon_all /vendor/etc/fstab.qcom
+    write /proc/sys/vm/swappiness 100
 
     # Load WLAN driver
     insmod /vendor/lib/modules/qca_cld3_wlan.ko

@@ -1003,7 +1003,6 @@ else
     # Set allocstall_threshold to 0 for all targets.
     # Set swappiness to 100 for all targets
     echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
-    echo 100 > /proc/sys/vm/swappiness
 
     # Disable wsf for all targets beacause we are using efk.
     # wsf Range : 1..1000 So set to bare minimum value 1.
