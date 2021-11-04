@@ -257,11 +257,18 @@ persist.vendor.sensors.support_direct_channel=false
 
 # SurfaceFlinger
 debug.sf.disable_client_composition_cache=1
+debug.sf.early.app.duration=16600000
+debug.sf.early.sf.duration=16600000
+debug.sf.earlyGl.app.duration=16600000
+debug.sf.earlyGl.sf.duration=16600000
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.hw=0
+debug.sf.late.app.duration=16600000
+debug.sf.late.sf.duration=10500000
 debug.sf.phase_offset_threshold_for_next_vsync_ns=6100000
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
+debug.sf.use_phase_offsets_as_durations=1
 ro.surface_flinger.enable_frame_rate_override=false
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=true
