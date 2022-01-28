@@ -17,6 +17,9 @@
          Max((status bar content height + waterfall top size), top cutout size) -->
     <dimen name="status_bar_height">49.0px</dimen>
 
+    <!-- for 20dp of padding at 3.5px/dp at default density -->
+    <dimen name="rounded_corner_content_padding">33.0px</dimen>
+
     <!-- Radius of the software rounded corners bottom. -->
     <dimen name="rounded_corner_radius_bottom">68.0px</dimen>
 
