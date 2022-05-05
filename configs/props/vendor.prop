@@ -289,9 +289,6 @@ persist.vendor.sensors.enable.rt_task=false
 persist.vendor.sensors.hal_trigger_ssr=false
 persist.vendor.sensors.support_direct_channel=false
 
-# Time
-sys.vendor.shutdown.waittime=500
-
 # Thermal
 vendor.sys.thermal.data.path=/data/vendor/thermal/
 
