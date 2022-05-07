@@ -438,19 +438,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.iop</name>
-        <version>1.0</version>
-        <version>2.0</version>
-        <interface>
-            <name>IIop</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
-            <name>IFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.mwqemadapter</name>
         <version>1.0</version>
         <interface>
@@ -463,14 +450,6 @@
         <version>1.0</version>
         <interface>
             <name>IPAL</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.perf</name>
-        <version>2.0-3</version>
-        <interface>
-            <name>IPerf</name>
             <instance>default</instance>
         </interface>
     </hal>
