@@ -151,7 +151,7 @@ on boot
 
     # DT2W
     chown system system /proc/tp_gesture
-    chmod 0644 /proc/tp_gesture
+    chmod 0664 /proc/tp_gesture
 
     # Battery health
     chown system system /sys/class/power_supply/battery/input_suspend
