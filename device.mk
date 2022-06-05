@@ -13,6 +13,10 @@ $(call inherit-product, vendor/xiaomi/fog/fog-vendor.mk)
 # API Level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Audio configs
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1650
 TARGET_SCREEN_WIDTH := 720
