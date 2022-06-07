@@ -21,6 +21,9 @@ TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := fog,rain,wind
 
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # Inherit from sm6225-common
 include device/xiaomi/sm6225-common/BoardConfigCommon.mk
 
