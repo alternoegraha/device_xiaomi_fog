@@ -28,3 +28,6 @@ ro.vendor.audio.surround.support=false
 ro.vendor.audio.vocal.support=false
 ro.vendor.audio.voice.change.support=true
 ro.vendor.qspm.enable=true
+
+# NFC
+ro.hardware.nfc_nci=pn8x
