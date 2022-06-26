@@ -20,14 +20,6 @@ ro.carrier.name                u:object_r:exported_default_prop:s0
 ro.product.marketname          u:object_r:build_prop:s0
 ro.product.mod_device          u:object_r:build_prop:s0
 
-# IMEI
-persist.radio.imei             u:object_r:deviceid_prop:s0
-persist.radio.meid             u:object_r:deviceid_prop:s0
-ro.ril.miui.imei               u:object_r:deviceid_prop:s0
-ro.ril.oem.imei                u:object_r:deviceid_prop:s0
-ro.ril.oem.meid                u:object_r:deviceid_prop:s0
-ro.vendor.oem.                 u:object_r:deviceid_prop:s0
-
 # IR
 ro.lirc.dev                    u:object_r:lirc_prop:s0
 
