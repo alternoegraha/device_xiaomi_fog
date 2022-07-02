@@ -9,6 +9,10 @@ DEVICE_PATH := device/xiaomi/fog
 # Display
 TARGET_SCREEN_DENSITY := 320
 
+# HIDL
+ODM_MANIFEST_SKUS += c3qn
+ODM_MANIFEST_C3QN_FILES := $(DEVICE_PATH)/manifest_c3qn.xml
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_fog
 TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_fog
