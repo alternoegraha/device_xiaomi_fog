@@ -6,12 +6,16 @@ on post-fs-data
     chown nfc nfc /dev/pn553
 
 on boot
+    # Add a cpuset for the camera daemon
+    # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
     write /dev/cpuset/camera-daemon/cpus 0-7
     write /dev/cpuset/camera-daemon/mems 0
     chown cameraserver cameraserver /dev/cpuset/camera-daemon
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
+    chmod 0777 /data/vendor/camera
+    chmod 0666 /data/vendor/camera/com.xiaomi.dcal.wd.data
 
 service vendor.secure_element_hal_service /vendor/bin/hw/android.hardware.secure_element@1.2-service
     override
