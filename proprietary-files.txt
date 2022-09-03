@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from miui_FOGGlobal_V13.0.7.0.RGEMIXM_432dc3edb4_11.0
+# All unpinned blobs below are extracted from miui_FOGGlobal_V13.0.2.0.SGEMIXM_c5e52078c0_12.0
 
 # ACDB
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Bluetooth_cal.acdb
@@ -471,6 +471,7 @@ vendor/etc/sensors/config/bengal_sc7a20_0.json
 vendor/etc/sensors/config/bmi26x_0.json
 vendor/etc/sensors/config/bmi26x_0_crt.json
 vendor/etc/sensors/config/bmi26x_0_crt_cfg.json
+vendor/etc/sensors/config/bmi3x0_0.json
 vendor/etc/sensors/config/dynamic_sensors.json
 vendor/etc/sensors/config/ginum_qmc6308_0.json
 vendor/etc/sensors/config/holi_tmd2755_1st.json
@@ -479,6 +480,7 @@ vendor/etc/sensors/config/icm4x6x.json
 vendor/etc/sensors/config/kona_hdk_ak991x_0.json
 vendor/etc/sensors/config/kona_mir3da_0.json
 vendor/etc/sensors/config/msmnile_bmi26x_0.json
+vendor/etc/sensors/config/msmnile_bmi3x0_0.json
 vendor/etc/sensors/config/msmnile_icm4x6x.json
 vendor/etc/sensors/config/sc7a20_0.json
 vendor/etc/sensors/config/sns_amd.json
@@ -606,6 +608,7 @@ vendor/etc/thermal-normal.conf
 vendor/etc/thermal-phone.conf
 vendor/etc/thermal-tgame.conf
 vendor/etc/thermal-video.conf
+vendor/etc/thermal-youtube.conf
 vendor/etc/thermald-devices.conf
 -vendor/lib/libthermalclient.so
 -vendor/lib64/libthermalclient.so
