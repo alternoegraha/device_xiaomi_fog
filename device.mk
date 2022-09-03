@@ -45,7 +45,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/com.nxp.mifare.xml
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/nfc/init.nfc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.nfc.rc
+    $(LOCAL_PATH)/rootdir/init.device.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.device.rc
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
