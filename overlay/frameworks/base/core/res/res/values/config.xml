@@ -115,64 +115,64 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>38</item>
-        <item>69</item>
-        <item>125</item>
-        <item>190</item>
-        <item>250</item>
-        <item>270</item>
-        <item>380</item>
-        <item>485</item>
+        <item>18</item>
+        <item>25</item>
+        <item>31</item>
+        <item>77</item>
+        <item>107</item>
+        <item>138</item>
+        <item>184</item>
+        <item>266</item>
+        <item>363</item>
+        <item>445</item>
+        <item>496</item>
+        <item>502</item>
+        <item>502</item>
+        <item>502</item>
+        <item>507</item>
+        <item>507</item>
+        <item>512</item>
+        <item>512</item>
+        <item>512</item>
+        <item>517</item>
+        <item>517</item>
+        <item>522</item>
+        <item>527</item>
+        <item>527</item>
+        <item>527</item>
+        <item>542</item>
+        <item>553</item>
+        <item>563</item>
+        <item>573</item>
+        <item>583</item>
+        <item>594</item>
+        <item>604</item>
+        <item>609</item>
+        <item>624</item>
+        <item>629</item>
+        <item>640</item>
         <item>655</item>
-        <item>680</item>
-        <item>680</item>
-        <item>680</item>
-        <item>690</item>
-        <item>690</item>
-        <item>690</item>
-        <item>700</item>
-        <item>700</item>
-        <item>700</item>
-        <item>710</item>
-        <item>710</item>
-        <item>720</item>
-        <item>720</item>
-        <item>720</item>
-        <item>730</item>
-        <item>730</item>
-        <item>730</item>
-        <item>750</item>
-        <item>760</item>
-        <item>780</item>
-        <item>780</item>
-        <item>790</item>
-        <item>800</item>
-        <item>810</item>
-        <item>830</item>
-        <item>840</item>
-        <item>850</item>
-        <item>855</item>
-        <item>860</item>
-        <item>870</item>
-        <item>890</item>
-        <item>900</item>
-        <item>910</item>
-        <item>920</item>
-        <item>940</item>
-        <item>950</item>
-        <item>1120</item>
-        <item>1300</item>
-        <item>1520</item>
-        <item>1730</item>
-        <item>1950</item>
-        <item>2200</item>
-        <item>2450</item>
-        <item>2530</item>
-        <item>3140</item>
-        <item>3520</item>
-        <item>3550</item>
-        <item>3640</item>
-        <item>4095</item>
+        <item>665</item>
+        <item>670</item>
+        <item>686</item>
+        <item>696</item>
+        <item>701</item>
+        <item>716</item>
+        <item>727</item>
+        <item>737</item>
+        <item>865</item>
+        <item>1003</item>
+        <item>1136</item>
+        <item>1269</item>
+        <item>1382</item>
+        <item>1535</item>
+        <item>1638</item>
+        <item>1714</item>
+        <item>2047</item>
+        <item>2047</item>
+        <item>2047</item>
+        <item>2047</item>
+        <item>2047</item>
     </integer-array>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
@@ -186,66 +186,66 @@
         This array should have size one greater than the size of the config_autoBrightnessLevels
         array. The brightness values must be non-negative and non-decreasing. This must be
         overridden in platform specific overlays -->
-    <integer-array name="config_autoBrightnessDisplayValuesNits">
-        <item>5</item>
-        <item>5</item>
-        <item>6</item>
-        <item>15</item>
-        <item>21</item>
-        <item>27</item>
-        <item>36</item>
-        <item>52</item>
-        <item>71</item>
-        <item>87</item>
-        <item>97</item>
-        <item>98</item>
-        <item>98</item>
-        <item>98</item>
-        <item>99</item>
-        <item>99</item>
-        <item>100</item>
-        <item>100</item>
-        <item>100</item>
-        <item>101</item>
-        <item>101</item>
-        <item>102</item>
-        <item>103</item>
-        <item>103</item>
-        <item>103</item>
-        <item>106</item>
-        <item>108</item>
-        <item>110</item>
-        <item>112</item>
-        <item>114</item>
-        <item>116</item>
-        <item>118</item>
-        <item>119</item>
-        <item>122</item>
-        <item>123</item>
-        <item>125</item>
-        <item>128</item>
-        <item>130</item>
-        <item>131</item>
-        <item>134</item>
-        <item>136</item>
-        <item>137</item>
-        <item>140</item>
-        <item>142</item>
-        <item>144</item>
-        <item>169</item>
-        <item>196</item>
-        <item>222</item>
-        <item>248</item>
-        <item>270</item>
-        <item>300</item>
-        <item>320</item>
-        <item>335</item>
-        <item>407</item>
-        <item>472</item>
-        <item>500</item>
-        <item>530</item>
-        <item>530</item>
-    </integer-array>
+    <array name="config_autoBrightnessDisplayValuesNits">
+        <item>3.5</item>
+        <item>4.8</item>
+        <item>6.0</item>
+        <item>15.0</item>
+        <item>21.0</item>
+        <item>27.0</item>
+        <item>36.0</item>
+        <item>52.0</item>
+        <item>71.0</item>
+        <item>87.0</item>
+        <item>97.0</item>
+        <item>98.0</item>
+        <item>98.0</item>
+        <item>98.0</item>
+        <item>99.0</item>
+        <item>99.0</item>
+        <item>100.0</item>
+        <item>100.0</item>
+        <item>100.0</item>
+        <item>101.0</item>
+        <item>101.0</item>
+        <item>102.0</item>
+        <item>103.0</item>
+        <item>103.0</item>
+        <item>103.0</item>
+        <item>106.0</item>
+        <item>108.0</item>
+        <item>110.0</item>
+        <item>112.0</item>
+        <item>114.0</item>
+        <item>116.0</item>
+        <item>118.0</item>
+        <item>119.0</item>
+        <item>122.0</item>
+        <item>123.0</item>
+        <item>125.0</item>
+        <item>128.0</item>
+        <item>130.0</item>
+        <item>131.0</item>
+        <item>134.0</item>
+        <item>136.0</item>
+        <item>137.0</item>
+        <item>140.0</item>
+        <item>142.0</item>
+        <item>144.0</item>
+        <item>169.0</item>
+        <item>196.0</item>
+        <item>222.0</item>
+        <item>248.0</item>
+        <item>270.0</item>
+        <item>300.0</item>
+        <item>320.0</item>
+        <item>335.0</item>
+        <item>400.0</item>
+        <item>400.0</item>
+        <item>400.0</item>
+        <item>400.0</item>
+        <item>400.0</item>
+    </array>
 
     <!-- Array of light sensor lux values to define our levels for auto backlight brightness support.
         The N entries of this array define N + 1 control points as follows:
@@ -315,7 +315,7 @@
         <item>1500</item>
         <item>1700</item>
         <item>1900</item>
-        <item>2200</item>
+        <item>2000</item>
         <item>2500</item>
         <item>3000</item>
         <item>3500</item>
@@ -340,10 +340,10 @@
         Note that this value should *not* reflect the maximum brightness value for any high
         brightness modes but only the maximum brightness value obtainable in a sustainable manner.
         This array should be equal in size to config_screenBrightnessBacklight -->
-    <integer-array name="config_screenBrightnessNits">
+    <array name="config_screenBrightnessNits">
         <item>2</item>
-        <item>455</item>
-    </integer-array>
+        <item>400</item>
+    </array>
 
     <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
         percent. The length of this array is assumed to be one greater than
@@ -421,19 +421,19 @@
 
     <!-- The maximum range of gamma adjustment possible using the screen
         auto-brightness adjustment setting. -->
-    <fraction name="config_autoBrightnessAdjustmentMaxGamma">300%</fraction>
+    <fraction name="config_autoBrightnessAdjustmentMaxGamma">100.0%</fraction>
 
     <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
         for debouncing the light sensor.  Different constants are used to debounce the light sensor
         when adapting to brighter or darker environments.  This parameter controls how quickly
         brightness changes occur in response to an observed change in light level that exceeds the
         hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
 
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
-    <integer name="config_screenBrightnessSettingDefault">184</integer>
+    <integer name="config_screenBrightnessSettingDefault">102</integer>
 
     <!-- Maximum screen brightness allowed by the power manager.
         The user is forbidden from setting the brightness above this level. -->
@@ -441,10 +441,10 @@
 
     <!-- Minimum screen brightness setting allowed by the power manager.
         The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">2</integer>
+    <integer name="config_screenBrightnessSettingMinimum">8</integer>
 
     <!-- Minimum screen brightness allowed by the power manager. -->
-    <integer name="config_screenBrightnessDim">6</integer>
+    <integer name="config_screenBrightnessDim">13</integer>
 
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
