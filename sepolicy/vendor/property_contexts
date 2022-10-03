@@ -27,5 +27,9 @@ persist.vendor.sys.pay                          u:object_r:vendor_tee_listener_p
 ro.vendor.ril                                   u:object_r:vendor_public_vendor_default_prop:s0
 vendor.rild.libpath                             u:object_r:vendor_radio_prop:s0
 
+# Serial Number
+ro.vendor.oem.sno                               u:object_r:vendor_sno_prop:s0
+ro.vendor.oem.psno                              u:object_r:vendor_sno_prop:s0
+
 # Thermal
 vendor.sys.thermal.                             u:object_r:vendor_thermal_normal_prop:s0

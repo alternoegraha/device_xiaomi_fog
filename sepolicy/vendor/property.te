@@ -10,6 +10,9 @@ vendor_internal_prop(lirc_prop)
 # Fingerprint
 vendor_restricted_prop(vendor_fingerprint_prop)
 
+# Serial Number
+vendor_internal_prop(vendor_sno_prop)
+
 # Thermal
 vendor_internal_prop(vendor_thermal_normal_prop)
 
