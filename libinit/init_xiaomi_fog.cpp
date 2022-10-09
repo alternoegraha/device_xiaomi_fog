@@ -17,7 +17,7 @@ static const variant_info_t fog_global_info = {
     .device = "fog",
     .marketname = "Redmi 10C",
     .model = "220333QAG",
-    .build_fingerprint = "Redmi/fog/fog:12/SKQ1.211103.001/V13.0.2.0.SGEMIXM:user/release-keys",
+    .build_fingerprint = "Redmi/fog_global/fog:12/SKQ1.211103.001/V13.0.2.0.SGEMIXM:user/release-keys",
 
     .nfc = false,
 };
@@ -30,7 +30,7 @@ static const variant_info_t fog_global2_info = {
     .device = "fog",
     .marketname = "Redmi 10 Power",
     .model = "220333QBI",
-    .build_fingerprint = "Redmi/fog_global2/fog:12/SKQ1.211103.001/V13.0.2.0.SGEMIXM:user/release-keys",
+    .build_fingerprint = "Redmi/fog_global/fog:12/SKQ1.211103.001/V13.0.2.0.SGEMIXM:user/release-keys",
 
     .nfc = false,
 };
@@ -43,7 +43,7 @@ static const variant_info_t fog_in_info = {
     .device = "fog",
     .marketname = "Redmi 10",
     .model = "220333QBI",
-    .build_fingerprint = "Redmi/fog_in/fog:12/SKQ1.211103.001/V13.0.1.0.SGEINXM:user/release-keys",
+    .build_fingerprint = "Redmi/fog_global/fog:12/SKQ1.211103.001/V13.0.2.0.SGEMIXM:user/release-keys",
 
     .nfc = false,
 };
