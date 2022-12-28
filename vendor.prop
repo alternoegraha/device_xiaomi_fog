@@ -29,6 +29,12 @@ ro.vendor.audio.vocal.support=false
 ro.vendor.audio.voice.change.support=true
 ro.vendor.qspm.enable=true
 
+# Bluetooth
+bluetooth.hardware.power.idle_cur_ma=7
+bluetooth.hardware.power.operating_voltage_mv=3700
+bluetooth.hardware.power.rx_cur_ma=75
+bluetooth.hardware.power.tx_cur_ma=93
+
 # Display
 debug.sf.high_fps_early_gl_phase_offset_ns=-5000000
 debug.sf.high_fps_early_phase_offset_ns=-5000000
