@@ -22,16 +22,7 @@
     <!-- Height of the status bar in landscape -->
     <dimen name="status_bar_height_landscape">24dp</dimen>
 
-    <!-- for 20dp of padding at 3.5px/dp at default density -->
-    <dimen name="rounded_corner_content_padding">33.0px</dimen>
-
-    <!-- Radius of the software rounded corners bottom. -->
-    <dimen name="rounded_corner_radius_bottom">68.0px</dimen>
-
-    <!-- Radius of the software rounded corners top. -->
-    <dimen name="rounded_corner_radius_top">68.0px</dimen>
-
-    <!-- Adjustment for software rounded corners since corners aren't perfectly round. -->
-    <dimen name="rounded_corner_radius_adjustment">6px</dimen>
+    <!-- Default radius of the software rounded corners. -->
+    <dimen name="rounded_corner_radius">5dp</dimen>
 
 </resources>
