@@ -4,6 +4,9 @@ persist.sys.btstack.absvolfeature=false
 persist.vendor.bt.a2dp.absvolfeature=false
 vendor.bluetooth.soc=cherokee
 
+# Blur
+ro.launcher.blur.appLaunch=0
+
 # Camera
 camera.disable_zsl_mode=true
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
