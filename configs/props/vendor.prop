@@ -145,6 +145,7 @@ persist.vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.service.bdroid.sibs=false
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
+vendor.hw.fm.init=0
 vendor.qcom.bluetooth.soc=cherokee
 
 # Crypto
