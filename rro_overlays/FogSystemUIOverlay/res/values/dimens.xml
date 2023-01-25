@@ -30,4 +30,7 @@
 
     <!--  Total minimum padding to enforce to ensure that the dot can always show  -->
     <dimen name="ongoing_appops_dot_min_padding">40px</dimen>
+
+    <!-- Padding for the lock icon on the keyguard. In pixels - should not scale with display size. -->
+    <dimen name="lock_icon_padding">32px</dimen>
 </resources>
