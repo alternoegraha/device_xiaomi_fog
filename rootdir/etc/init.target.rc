@@ -170,6 +170,9 @@ on boot
     # Load exfat driver
     insmod /vendor/lib/modules/exfat.ko
 
+    # default country code
+    setprop ro.boot.wificountrycode 00
+
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
 
