@@ -15,6 +15,7 @@ ro.charger.enable_suspend=true
 # Display
 debug.hwui.skia_atrace_enabled=false
 debug.sf.enable_hwc_vds=0
+debug.sf.auto_latch_unsignaled=0
 debug.sf.latch_unsignaled=1
 
 # CNE
