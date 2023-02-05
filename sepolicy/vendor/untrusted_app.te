@@ -1,0 +1,14 @@
+allow untrusted_app aac_drc_prop:file { open getattr map };
+allow untrusted_app ab_update_gki_prop:file { open getattr map };
+allow untrusted_app proc_asound:dir { search };
+allow untrusted_app proc_max_map_count:file { read };
+allow untrusted_app proc_zoneinfo:file { read };
+allow untrusted_app sysfs:dir r_dir_perms;
+allow untrusted_app sysfs_msm_subsys:dir { search };
+allow untrusted_app sysfs_msm_subsys:file r_file_perms;
+allow untrusted_app untrusted_app:udp_socket ioctl;
+allow untrusted_app vendor_sysfs_soc:dir { search };
+allow untrusted_app vendor_sysfs_soc:file r_file_perms;
+allow untrusted_app zygote:unix_stream_socket { getopt };
+
+get_prop(untrusted_app, vendor_persist_camera_prop)

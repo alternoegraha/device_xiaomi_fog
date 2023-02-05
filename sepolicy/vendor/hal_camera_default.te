@@ -1,0 +1,31 @@
+# For interfacing with PowerHAL
+hal_client_domain(hal_camera_default, hal_power)
+hal_client_domain(hal_camera_default, hal_configstore)
+
+allow hal_camera_default {
+  mnt_vendor_file
+  vendor_persist_camera_file
+  vendor_persist_sensors_file
+  vendor_sysfs_kgsl
+}:dir r_dir_perms;
+
+allow hal_camera_default {
+  mnt_vendor_file
+  vendor_persist_camera_file
+  vendor_persist_sensors_file
+  vendor_sysfs_kgsl
+}:{ 
+  file
+  lnk_file
+} r_file_perms;
+
+allow hal_camera_default proc_stat:file read;
+allow hal_camera_default socket_device:sock_file write;
+allow hal_camera_default proc_stat:file { open };
+allow hal_camera_default public_adsprpcd_file:file r_file_perms;
+allow hal_camera_default vendor_xdsp_device:chr_file r_file_perms;
+
+binder_call(hal_camera_default, system_server)
+
+get_prop(hal_camera_default, exported_camera_prop)
+set_prop(hal_camera_default, vendor_camera_prop)

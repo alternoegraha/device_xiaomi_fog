@@ -1,0 +1,2 @@
+dontaudit untrusted_app odsign_prop:file read;
+dontaudit untrusted_app system_file:file lock;

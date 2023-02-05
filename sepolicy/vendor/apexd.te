@@ -1,0 +1,14 @@
+allow apexd {
+  vendor_custom_ab_block_device
+  vendor_dip_device
+  vendor_gpt_block_device
+  vendor_logdump_partition
+  vendor_mdtp_device
+  vendor_modem_block_device
+  vendor_modem_efs_partition_device
+  vendor_persist_block_device
+  vendor_rawdump_block_device
+  vendor_ssd_block_device
+  vendor_uefi_block_device
+  vendor_xbl_block_device
+}:blk_file getattr;

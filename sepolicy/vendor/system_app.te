@@ -1,0 +1,16 @@
+allow system_app proc_pagetypeinfo:file { read open getattr };
+allow system_app sysfs_msm_subsys:dir search;
+allow system_app sysfs_msm_subsys:file r_file_perms;
+allow system_app sysfs_thermal:file rw_file_perms;
+allow system_app sysfs_zram:dir r_dir_perms;
+allow system_app sysfs_zram:file r_file_perms;
+allow system_app vendor_sysfs_battery_supply:dir search;
+allow system_app vendor_sysfs_battery_supply:file { read open getattr };
+allow system_app zygote:unix_stream_socket { getopt };
+
+binder_call(system_app, hal_power_default)
+binder_call(system_app, hal_vibrator_default)
+
+r_dir_file(system_app, vendor_sysfs_battery_supply)
+
+get_prop(system_app, vendor_persist_camera_prop)
