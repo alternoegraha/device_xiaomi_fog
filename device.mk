@@ -322,11 +322,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_c3qn/com.nxp.mifare.xml
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
-
-PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_PACKAGES += \
+    CarrierConfigFog \
+    DialerFog \
+    FrameworksFog \
+    SettingsFog \
+    SettingsProviderFog \
+    SystemUIFog \
+    TelephonyFog
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

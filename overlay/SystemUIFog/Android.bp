@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "SystemUIFog",
+    theme: "SystemUIFog",
+    sdk_version: "current",
+    vendor: true,
+}
