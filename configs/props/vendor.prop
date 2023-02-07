@@ -221,7 +221,6 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sdm.support_writeback=0
-debug.sf.disable_backpressure=1
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.hw=0
 persist.sys.sf.color_mode=0
