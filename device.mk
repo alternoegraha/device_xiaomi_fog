@@ -406,8 +406,6 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/google/interfaces \
-    hardware/google/pixel \
     hardware/qcom-caf/bootctrl \
     hardware/xiaomi
 
@@ -443,19 +441,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
-# USB HAL
+# USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb-service.fog \
-    android.hardware.usb.gadget-service.fog
-
-PRODUCT_PACKAGES += \
-    init.gadgethal.sh \
-    init.qcom.usb.sh \
-    init.qti.usb.debug.sh
+    android.hardware.usb@1.3-service-fog \
+    android.hardware.usb.gadget@1.1-service-fog
 
 PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
-    init.qti.usb.debug.rc
+    init.qcom.usb.sh
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \

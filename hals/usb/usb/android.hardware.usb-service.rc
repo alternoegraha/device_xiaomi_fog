@@ -1,4 +1,0 @@
-service vendor.usb /vendor/bin/hw/android.hardware.usb-service.fog
-    class hal
-    user system
-    group system shell

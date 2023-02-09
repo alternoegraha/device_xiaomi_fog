@@ -95,11 +95,8 @@
 /data/vendor/thermal(/.*)?                                              u:object_r:thermal_data_file:s0
 
 # USB
-/(vendor|system/vendor)/bin/hw/android\.hardware\.usb-service\.fog                u:object_r:hal_usb_impl_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.usb\.gadget-service\.fog        u:object_r:hal_usb_gadget_impl_exec:s0
-
-# USB Gadget script
-/(vendor|system/vendor)/bin/init\.gadgethal\.sh                         u:object_r:init_gadgethal_exec:s0
+/vendor/bin/hw/android\.hardware\.usb\@1\.[0-3]-service-fog	        u:object_r:vendor_hal_usb_qti_exec:s0
+/vendor/bin/hw/android\.hardware\.usb\.gadget\@1\.[0-2]-service-fog	u:object_r:vendor_hal_usb_qti_exec:s0
 
 # WiFi
 /data/vendor/mac_addr(/.*)?                                             u:object_r:vendor_wifi_vendor_data_file:s0

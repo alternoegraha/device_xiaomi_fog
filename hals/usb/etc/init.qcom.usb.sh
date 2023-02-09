@@ -1,5 +1,5 @@
 #!/vendor/bin/sh
-# Copyright (c) 2012-2018, 2020-2021 The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2018, 2020 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -42,11 +42,18 @@ soc_id=`cat /sys/devices/soc0/soc_id 2> /dev/null`
 esoc_name=`cat /sys/bus/esoc/devices/esoc0/esoc_name 2> /dev/null`
 
 target=`getprop ro.board.platform`
+product=`getprop ro.product.name`
+product=${product:(-4)}
+
+if [ -f /sys/class/android_usb/f_mass_storage/lun/nofua ]; then
+	echo 1  > /sys/class/android_usb/f_mass_storage/lun/nofua
+fi
 
 #
 # Override USB default composition
 #
 # If USB persist config not set, set default configuration
+dserial=`getprop ro.debuggable`
 if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" != "user" -a \
 	"$(getprop init.svc.vendor.usb-gadget-hal-1-0)" != "running" ]; then
     if [ "$esoc_name" != "" ]; then
@@ -64,7 +71,11 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
                   *)
 		  case "$soc_machine" in
 		    "SA")
-	              setprop persist.vendor.usb.config diag,adb
+			if [ "$product" == "gvmq" ]; then
+				setprop persist.vendor.usb.config adb
+			else
+				setprop persist.vendor.usb.config diag,adb
+			fi
 		    ;;
 		    *)
 	            case "$target" in
@@ -72,7 +83,11 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 	                  setprop persist.vendor.usb.config diag,serial_cdev,serial_tty,rmnet_ipa,mass_storage,adb
 		      ;;
 	              "msm8909")
-		          setprop persist.vendor.usb.config diag,serial_smd,rmnet_qti_bam,adb
+			    if [ -d /config/usb_gadget ]; then
+				    setprop persist.vendor.usb.config diag,serial_cdev,rmnet,adb
+			    else
+				    setprop persist.vendor.usb.config diag,serial_smd,rmnet_qti_bam,adb
+			    fi
 		      ;;
 	              "msm8937")
 			    if [ -d /config/usb_gadget ]; then
@@ -101,21 +116,15 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 	              "sdm845" | "sdm710")
 		          setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
 		      ;;
-	              "msmnile")
-		               case "$soc_id" in
-			               "362" | "367")
-			                  setprop persist.vendor.usb.config diag,adb
-			               ;;
-			               *)
-			                  setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
-			               ;;
-		               esac
-		      ;;
-	              "sm6150" | "trinket" | "lito" | "atoll" | "bengal" | "lahaina" | "holi")
-			  setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
-		      ;;
-	              "monaco")
-		          setprop persist.vendor.usb.config diag,qdss,rmnet,adb
+	              "msmnile" | "sm6150" | "trinket" | "lito" | "atoll" | "bengal" | "lahaina" | "holi")
+			  case "$dserial" in
+                                 "0")
+                                     setprop persist.vendor.usb.config none
+                                     ;;
+                                  *)
+                                     setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
+                                     ;;
+                          esac
 		      ;;
 	              *)
 		          setprop persist.vendor.usb.config diag,adb
@@ -154,11 +163,7 @@ esac
 if [ -d /config/usb_gadget ]; then
 	# Chip-serial is used for unique MSM identification in Product string
 	msm_serial=`cat /sys/devices/soc0/serial_number`;
-	# If MSM serial number is not available, then keep it blank instead of 0x00000000
-	if [ "$msm_serial" != "" ]; then
-		msm_serial_hex=`printf %08X $msm_serial`
-	fi
-
+	msm_serial_hex=`printf %08X $msm_serial`
 	machine_type=`cat /sys/devices/soc0/machine`
 	setprop vendor.usb.product_string "$machine_type-$soc_hwplatform _SN:$msm_serial_hex"
 
@@ -169,6 +174,14 @@ if [ -d /config/usb_gadget ]; then
 		echo $serialno > /config/usb_gadget/g1/strings/0x409/serialnumber
 	fi
 	setprop vendor.usb.configfs 1
+fi
+
+# update product
+marketname=`getprop ro.product.marketname`
+if [ "$marketname" != "" ]; then
+    setprop vendor.usb.product_string "$marketname"
+else
+    setprop vendor.usb.product_string "$(getprop ro.product.model)"
 fi
 
 #
