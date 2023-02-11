@@ -50,6 +50,11 @@ genfscon proc /last_kmsg                                                        
 # UFS
 genfscon sysfs /devices/platform/soc/4804000.ufshc/clkgate_enable               u:object_r:vendor_sysfs_scsi_host:s0
 
+# USB
+genfscon sysfs /devices/platform/soc/4e00000.ssusb/4e00000.dwc3/xhci-hcd.0.auto/usb1/1-1/idProduct  u:object_r:vendor_sysfs_usb_device:s0
+genfscon sysfs /devices/platform/soc/4e00000.ssusb/4e00000.dwc3/xhci-hcd.0.auto/usb1/1-1/idVendor   u:object_r:vendor_sysfs_usb_device:s0
+genfscon sysfs /devices/platform/soc/4e00000.ssusb/4e00000.dwc3/xhci-hcd.0.auto/usb1/1-1/version    u:object_r:vendor_sysfs_usb_device:s0
+
 # Wakeup source stats
 genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup                                                                                                                              u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup/wakeup25                                                                                                                     u:object_r:sysfs_wakeup:s0
