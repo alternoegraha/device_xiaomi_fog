@@ -443,8 +443,7 @@ PRODUCT_COPY_FILES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service-fog \
-    android.hardware.usb.gadget@1.1-service-fog
+    android.hardware.usb@1.3-service-fog
 
 PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
