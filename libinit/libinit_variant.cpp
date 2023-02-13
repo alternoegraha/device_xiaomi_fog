@@ -13,15 +13,15 @@
 using android::base::GetProperty;
 
 #define HWC_PROP "ro.boot.hwc"
+#define HWNAME_PROP "ro.boot.hwname"
 #define SKU_PROP "ro.boot.product.hardware.sku"
 
 void search_variant(const std::vector<variant_info_t> variants) {
     std::string hwc_value = GetProperty(HWC_PROP, "");
-    std::string sku_value = GetProperty(SKU_PROP, "");
+    std::string hwname_value = GetProperty(HWNAME_PROP, "");
 
     for (const auto& variant : variants) {
-        if ((variant.hwc_value == "" || variant.hwc_value == hwc_value) &&
-            (variant.sku_value == "" || variant.sku_value == sku_value)) {
+        if ((variant.hwc_value == "" || variant.hwc_value == hwc_value) && (variant.device == hwname_value)) {
             set_variant_props(variant);
             break;
         }
