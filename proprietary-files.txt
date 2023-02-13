@@ -769,6 +769,9 @@ vendor/lib64/hw/vulkan.adreno.so
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|99cfd80965c170f4885a7dd62c0eaad1a0c7840f
 system_ext/framework/com.android.hotwordenrollment.common.util.jar|a418f5697951468fb93788b6e92d2912e7ae7149
 
+# IMS - from sweet V14.0.2.0.TKFMIXM
+-system_ext/priv-app/ims/ims.apk|6a383ab360468c2b040c4ce618ac5188ab4fc655
+
 # IMS - from MIUI
 -system_ext/app/ImsRcsService/ImsRcsService.apk
 -system_ext/app/uceShimService/uceShimService.apk
@@ -793,7 +796,6 @@ system_ext/lib64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
--system_ext/priv-app/ims/ims.apk
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
