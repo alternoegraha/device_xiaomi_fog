@@ -42,7 +42,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.enable_allow_idle_fallback=1 \
     vendor.display.disable_idle_time_video=1 \
     vendor.display.disable_idle_time_hdr=1 \
-    debug.sf.predict_hwc_composition_strategy=0
+    debug.sf.predict_hwc_composition_strategy=0 \
+    debug.sf.treat_170m_as_sRGB=1
 
 # Enable offline rotator for Bengal, Monaco, Khaje.
 ifneq ($(filter bengal monaco khaje, $(TARGET_BOARD_PLATFORM)),$(TARGET_BOARD_PLATFORM))
