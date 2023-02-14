@@ -194,7 +194,7 @@ TARGET_BOARD_PLATFORM := bengal
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/tp_gesture"
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/hals/power/power-mode.cpp
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/configs/props/odm.prop
@@ -204,11 +204,11 @@ TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/configs/props/system_ext.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
 
 # Recovery
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/configs/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS ?= $(DEVICE_PATH)/configs
+TARGET_RELEASETOOLS_EXTENSIONS ?= $(DEVICE_PATH)
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
