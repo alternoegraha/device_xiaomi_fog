@@ -27,4 +27,5 @@ allow hal_camera_default vendor_xdsp_device:chr_file r_file_perms;
 
 binder_call(hal_camera_default, system_server)
 
+get_prop(hal_camera_default, exported_camera_prop)
 set_prop(hal_camera_default, vendor_camera_prop)
