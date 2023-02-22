@@ -1458,7 +1458,10 @@ vendor/lib64/libtime_genoff.so
 # Touch Firmware
 vendor/firmware/Conf_MultipleTest.ini
 vendor/firmware/focaltech_ts_fw_xinli.bin
+vendor/firmware/fs1599.fsm
 vendor/firmware/novatek_ts_fw.bin
+vendor/firmware/novatek_ts_hlt_fw.bin
+vendor/firmware/novatek_ts_hlt_mp.bin
 vendor/firmware/novatek_ts_mp.bin
 
 # Trusted Execution Environment connector
