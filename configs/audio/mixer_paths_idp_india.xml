@@ -405,9 +405,9 @@
     <ctl name="TX_DEC6 Volume" value="84" />
     <ctl name="TX_DEC7 Volume" value="84" />
 
-    <ctl name="ADC1 Volume" value="8" />
-    <ctl name="ADC2 Volume" value="8" />
-    <ctl name="ADC3 Volume" value="8" />
+    <ctl name="ADC1 Volume" value="12" />
+    <ctl name="ADC2 Volume" value="12" />
+    <ctl name="ADC3 Volume" value="12" />
 
 
     <!-- Headphone class-H mode -->
@@ -2707,7 +2707,7 @@
     <!-- lct modify -->
     <path name="speaker-mic">
         <path name="amic1" />
-        <ctl name="ADC1 Volume" value="8" />
+        <ctl name="ADC1 Volume" value="12" />
     </path>
 
     <path name="speaker-mic-liquid">
@@ -2732,18 +2732,22 @@
 
     <path name="handset-mic">
         <path name="amic1" />
+        <ctl name="ADC1 Volume" value="12" />
     </path>
 
     <path name="voice-handset-mic">
         <path name="amic1" />
+        <ctl name="ADC1 Volume" value="12" />
     </path>
 
     <path name="record-mic">
         <path name="amic1" />
+        <ctl name="ADC1 Volume" value="12" />
     </path>
 
     <path name="handset-mic-factory">
         <ctl name="TX_DEC0 Volume" value="84" />
+        <ctl name="ADC1 Volume" value="12" />
         <path name="amic1" />
     </path>
     <!-- lct modify end-->
