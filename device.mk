@@ -361,6 +361,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     cppreopts.sh
 
+# QTI Power HAL
+$(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
+
 # Public libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
