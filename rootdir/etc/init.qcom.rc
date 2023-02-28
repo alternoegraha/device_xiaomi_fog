@@ -464,9 +464,6 @@ on property:sys.boot_completed=1
     setprop lmkd.reinit 1
     chown media audio /sys/kernel/aud_dev/state
 
-    # Start perf
-    setprop vendor.post_boot.parsed 1
-    
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
 

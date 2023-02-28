@@ -26,10 +26,6 @@ pm.dexopt.bg-dexopt=speed-profile
 pm.dexopt.boot=verify
 pm.dexopt.first-boot=quicken
 
-# Deep Sleep
-pm.sleep_mode=1
-vendor.post_boot.parsed=1
-
 # DPM
 persist.dpm.feature=1
 
