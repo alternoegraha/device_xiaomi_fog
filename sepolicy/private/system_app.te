@@ -1,4 +1,7 @@
+dontaudit system_app privapp_data_file:dir search;
+
 binder_call(system_app, storaged)
+binder_call(system_app, system_suspend)
 
 dontaudit system_app {
   system_suspend_control_internal_service

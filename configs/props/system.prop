@@ -4,6 +4,7 @@ vendor.bluetooth.soc=cherokee
 # Camera
 camera.disable_zsl_mode=true
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera
+sys.cameratest.cameralevel=1
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,com.xiaomi.cameratest
 vendor.camera.aux.packagelist.ext=org.codeaurora.snapcam,com.android.camera,com.google.camera
 
