@@ -2716,8 +2716,11 @@
 
     <!-- lct modify -->
     <path name="speaker-mic">
+        <path name="amic1" />
         <path name="amic3" />
         <ctl name="ADC1 Volume" value="8" />
+        <ctl name="ADC2 Volume" value="8" />
+        <ctl name="TX_CDC_DMA_TX_3 Channels" value="Two" />
     </path>
 
     <path name="speaker-mic-liquid">
