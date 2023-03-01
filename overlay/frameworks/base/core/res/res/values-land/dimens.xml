@@ -7,5 +7,5 @@
     <!-- Height of the status bar.
          Do not read this dimen directly. Use {@link SystemBarUtils#getStatusBarHeight} instead.
          -->
-    <dimen name="status_bar_height">24dp</dimen>
+    <dimen name="status_bar_height">28dp</dimen>
 </resources>
