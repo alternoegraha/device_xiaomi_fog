@@ -72,40 +72,7 @@ if [ "$(getprop persist.vendor.usb.config)" == "diag,serial_cdev,rmnet,dpl,qdss,
 		    ;;
 		    *)
 	            case "$target" in
-	              "msm8996")
-	                  setprop persist.vendor.usb.config diag,serial_cdev,serial_tty,rmnet_ipa,mass_storage,adb
-		      ;;
-	              "msm8909")
-		          setprop persist.vendor.usb.config diag,serial_smd,rmnet_qti_bam,adb
-		      ;;
-	              "msm8937")
-			    if [ -d /config/usb_gadget ]; then
-				       setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
-			    else
-			               case "$soc_id" in
-				               "313" | "320")
-				                  setprop persist.vendor.usb.config diag,serial_smd,rmnet_ipa,adb
-				               ;;
-				               *)
-				                  setprop persist.vendor.usb.config diag,serial_smd,rmnet_qti_bam,adb
-				               ;;
-			               esac
-			    fi
-		      ;;
-	              "msm8953")
-			      if [ -d /config/usb_gadget ]; then
-				      setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
-			      else
-				      setprop persist.vendor.usb.config diag,serial_smd,rmnet_ipa,adb
-			      fi
-		      ;;
-	              "msm8998" | "sdm660" | "apq8098_latv")
-		          setprop persist.vendor.usb.config diag,serial_cdev,rmnet,adb
-		      ;;
-	              "sdm845" | "sdm710")
-		          setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
-		      ;;
-	              "msmnile" | "sm6150" | "trinket" | "lito" | "atoll" | "bengal" | "lahaina" | "holi")
+	              "bengal")
 			      case "$debuggable" in
 				  "1")
 					  setprop persist.vendor.usb.config adb
@@ -114,9 +81,6 @@ if [ "$(getprop persist.vendor.usb.config)" == "diag,serial_cdev,rmnet,dpl,qdss,
 					  setprop persist.vendor.usb.config none
 					  ;;
 				  esac
-		      ;;
-	              "monaco")
-		          setprop persist.vendor.usb.config diag,qdss,rmnet,adb
 		      ;;
 	              *)
 		          setprop persist.vendor.usb.config diag,adb
@@ -140,11 +104,11 @@ fi
 # Start peripheral mode on primary USB controllers for Automotive platforms
 case "$soc_machine" in
     "SA")
-	if [ -f /sys/bus/platform/devices/a600000.ssusb/mode ]; then
-	    default_mode=`cat /sys/bus/platform/devices/a600000.ssusb/mode`
+	if [ -f /sys/bus/platform/devices/4e00000.ssusb/mode ]; then
+	    default_mode=`cat /sys/bus/platform/devices/4e00000.ssusb/mode`
 	    case "$default_mode" in
 		"none")
-		    echo peripheral > /sys/bus/platform/devices/a600000.ssusb/mode
+		    echo peripheral > /sys/bus/platform/devices/4e00000.ssusb/mode
 		;;
 	    esac
 	fi
@@ -187,14 +151,6 @@ diag_extra=`getprop persist.vendor.usb.config.extra`
 if [ "$diag_extra" == "" ]; then
 	setprop persist.vendor.usb.config.extra none
 fi
-
-# enable rps cpus on msm8937 target
-setprop vendor.usb.rps_mask 0
-case "$soc_id" in
-	"294" | "295" | "353" | "354")
-		setprop vendor.usb.rps_mask 40
-	;;
-esac
 
 #
 # Initialize UVC conifguration.
