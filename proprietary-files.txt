@@ -386,6 +386,8 @@ vendor/etc/camera/morpho_lowlight_2.0_truly_sc500cs_front_iii_global.xml
 vendor/etc/camera/morpho_lowlight_2.0_truly_sc500cs_front_iii_india.xml
 
 # Camera Device
+system_ext/lib64/vendor.qti.hardware.camera.device@3.5.so
+vendor/lib/vendor.qti.hardware.camera.device@3.5.so
 vendor/lib64/vendor.qti.hardware.camera.device@3.5.so
 
 # Camera Feature
