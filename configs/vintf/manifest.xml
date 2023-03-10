@@ -177,10 +177,14 @@
         <fqname>@1.0::IMwqemAdapter/MwqemAdapter</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.qti.hardware.pasrmanager</name>
+        <name>vendor.qti.memory.pasrmanager</name>
         <transport>hwbinder</transport>
         <fqname>@1.1::IPasrManager/pasrhal</fqname>
-        <fqname>@1.1::IPasrManager/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.power.pasrmanager</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IPasrManager/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.perf</name>

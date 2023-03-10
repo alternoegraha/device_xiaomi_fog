@@ -453,6 +453,10 @@
             <name>IIop</name>
             <instance>default</instance>
         </interface>
+        <interface>
+            <name>IFactory</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.mwqemadapter</name>
