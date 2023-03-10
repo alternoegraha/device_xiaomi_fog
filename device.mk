@@ -335,7 +335,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Perf
-PRODUCT_COPY_FILES += \
+PRODUCT_PACKAGES += \
    android.hardware.thermal@2.0 \
    libpsi.vendor \
    libtflite \
