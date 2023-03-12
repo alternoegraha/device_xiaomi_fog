@@ -6,9 +6,9 @@ persist.vendor.audio.ambisonic.auto.profile=false
 persist.vendor.audio.ambisonic.capture=false
 persist.vendor.audio.apptype.multirec.enabled=false
 persist.vendor.audio.avs.afe_api_version=2
-persist.vendor.audio.fluence.speaker=true
+persist.vendor.audio.fluence.speaker=false
 persist.vendor.audio.fluence.tmic.enabled=false
-persist.vendor.audio.fluence.voicecall=true
+persist.vendor.audio.fluence.voicecall=false
 persist.vendor.audio.fluence.voicecomm=true
 persist.vendor.audio.fluence.voicerec=true
 persist.vendor.audio.ras.enabled=false
@@ -145,6 +145,7 @@ persist.vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.service.bdroid.sibs=false
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
+vendor.hw.fm.init=0
 vendor.qcom.bluetooth.soc=cherokee
 
 # Crypto
@@ -222,11 +223,12 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # Graphics
 debug.egl.hw=0
 debug.mdpcomp.logs=0
+debug.sdm.support_writeback=0
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.hw=0
 persist.sys.sf.color_mode=9
 persist.sys.sf.color_saturation=1.0
-persist.sys.sf.native_mode=2
+persist.sys.sf.native_mode=258
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
@@ -243,9 +245,14 @@ vendor.netflix.bsp_rev=Q6115-31409-1
 ro.hardware.nfc_nci=pn8x
 ro.vendor.se.type=HCE,UICC
 
+# Pasrmanager
+vendor.power.pasr.enabled=true
+vendor.pasr.activemode.enabled=true
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf-hal.ver=2.2
+ro.vendor.perf.scroll_opt=1
 
 # Radio
 persist.radio.multisim.config=dsds

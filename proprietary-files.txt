@@ -386,6 +386,8 @@ vendor/etc/camera/morpho_lowlight_2.0_truly_sc500cs_front_iii_global.xml
 vendor/etc/camera/morpho_lowlight_2.0_truly_sc500cs_front_iii_india.xml
 
 # Camera Device
+system_ext/lib64/vendor.qti.hardware.camera.device@3.5.so
+vendor/lib/vendor.qti.hardware.camera.device@3.5.so
 vendor/lib64/vendor.qti.hardware.camera.device@3.5.so
 
 # Camera Feature
@@ -846,6 +848,10 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
 # IO prefetcher
+system_ext/lib/libqti-iopd-client_system.so
+system_ext/lib/vendor.qti.hardware.iop@2.0.so
+system_ext/lib64/libqti-iopd-client_system.so
+system_ext/lib64/vendor.qti.hardware.iop@2.0.so
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
 vendor/lib64/libqti-iopd-client.so
@@ -949,6 +955,7 @@ vendor/lib64/libswvdec.so
 
 # Mlipay
 vendor/bin/mlipayd@1.1
+vendor/bin/mtd@1.3
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.3-service.rc
 -vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml
@@ -1032,8 +1039,11 @@ vendor/lib/libperfioctl.so
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
+vendor/lib/libqti-utils.so
+vendor/lib/libskewknob.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
+vendor/lib/vendor.qti.power.pasrmanager@1.0.so
 vendor/lib64/libadaptlaunch.so
 vendor/lib64/libappclassifier.so
 vendor/lib64/libgameoptfeature.so
@@ -1049,8 +1059,48 @@ vendor/lib64/libprekill.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
+vendor/lib64/libqti-utils.so
+vendor/lib64/libskewknob.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
+vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
+
+# Perf - system
+framework/QPerformance.jar
+framework/QXPerformance.jar
+framework/UxPerformance.jar
+-system_ext/app/PerformanceMode/PerformanceMode.apk
+-system_ext/app/workloadclassifier/workloadclassifier.apk
+system_ext/bin/perfservice
+system_ext/etc/init/perfservice.rc
+system_ext/etc/perf/wlc_model.tflite
+system_ext/etc/seccomp_policy/perfservice.policy
+system_ext/lib/libbeluga.so
+system_ext/lib/libcomposerextn.qti.so
+system_ext/lib/libdolphin.so
+system_ext/lib/liblayerext.qti.so
+system_ext/lib/libqape.qti.so
+system_ext/lib/libqti-at.so
+system_ext/lib/libqti-perfd-client_system.so
+system_ext/lib/libqti_performance.so
+system_ext/lib/libqti_workloadclassifiermodel.so
+system_ext/lib/libskewknob_system.so
+system_ext/lib/libsmomoconfig.qti.so
+system_ext/lib/vendor.qti.hardware.limits@1.0.so
+system_ext/lib/vendor.qti.hardware.limits@1.1.so
+system_ext/lib64/libbeluga.so
+system_ext/lib64/libcomposerextn.qti.so
+system_ext/lib64/libdolphin.so
+system_ext/lib64/liblayerext.qti.so
+system_ext/lib64/libqape.qti.so
+system_ext/lib64/libqti-at.so
+system_ext/lib64/libqti-perfd-client_system.so
+system_ext/lib64/libqti_performance.so
+system_ext/lib64/libqti_workloadclassifiermodel.so
+system_ext/lib64/libskewknob_system.so
+system_ext/lib64/libsmomoconfig.qti.so
+system_ext/lib64/vendor.qti.hardware.limits@1.0.so
+system_ext/lib64/vendor.qti.hardware.limits@1.1.so
 
 # Peripheral manager
 vendor/bin/pm-proxy
@@ -1108,6 +1158,12 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
 # QSP
+system_ext/bin/qspmsvc
+system_ext/etc/init/qspmsvc.rc
+system_ext/lib/libqspmsvc.so
+system_ext/lib/vendor.qti.qspmhal@1.0.so
+system_ext/lib64/libqspmsvc.so
+system_ext/lib64/vendor.qti.qspmhal@1.0.so
 vendor/bin/vendor.qti.qspmhal@1.0-service
 vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc
 vendor/etc/seccomp_policy/qspm.policy

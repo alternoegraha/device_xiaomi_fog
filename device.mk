@@ -339,19 +339,28 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Perf
+PRODUCT_PACKAGES += \
+   android.hardware.thermal@2.0 \
+   libpsi.vendor \
+   libtflite \
+   vendor.qti.hardware.perf@2.2.vendor \
+   vendor.qti.hardware.perf@2.3
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
     $(LOCAL_PATH)/configs/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor \
-    android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.2.vendor
+    android.hardware.power@1.3.vendor \
+    android.hardware.power-service-qti
 
 # Preopted ODEX files (system_other)
 PRODUCT_PACKAGES += \
     cppreopts.sh
+
+# QTI Power HAL
+$(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
 
 # Public libraries
 PRODUCT_COPY_FILES += \
