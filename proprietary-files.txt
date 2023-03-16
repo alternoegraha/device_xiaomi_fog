@@ -148,9 +148,9 @@ vendor/lib/libspkrprot.so
 vendor/lib/libssrec.so
 vendor/lib/libsurround_3mic_proc.so
 
-# Batterysecret
-vendor/bin/batterysecret
-vendor/etc/init/init.batterysecret.rc
+# Batterysecret - From spes 12 MIUI V13.0.4.0.SGCMIXM release-keys
+vendor/bin/batterysecret|58c75096366cf981b4a1f1cea1f41a392ac0d07b
+vendor/etc/init/init.batterysecret.rc|93b03fe5139f32fa17a006198a55cdc19570b252
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
