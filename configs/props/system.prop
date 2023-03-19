@@ -14,7 +14,7 @@ ro.charger.disable_init_blank=true
 ro.charger.enable_suspend=true
 
 # Display
-debug.sf.enable_hwc_vds=1
+debug.sf.enable_hwc_vds=0
 debug.sf.auto_latch_unsignaled=true
 
 # CNE
@@ -94,6 +94,7 @@ ril.subscription.types=NV,RUIM
 persist.timed.enable=true
 
 # WFD settings
+media.wfd.max_resolution=8
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 
