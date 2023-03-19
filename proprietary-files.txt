@@ -1069,8 +1069,6 @@ vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 framework/QPerformance.jar
 framework/QXPerformance.jar
 framework/UxPerformance.jar
--system_ext/app/PerformanceMode/PerformanceMode.apk
--system_ext/app/workloadclassifier/workloadclassifier.apk
 system_ext/bin/perfservice
 system_ext/etc/init/perfservice.rc
 system_ext/etc/perf/wlc_model.tflite
