@@ -57,8 +57,7 @@ PRODUCT_PACKAGES += \
 
 # Audio Daemon
 PRODUCT_PACKAGES += \
-    audioadsprpcd \
-    vendor.qti.audio-adsprpc-service.rc
+    audioadsprpcd
 
 # Audio configs
 PRODUCT_COPY_FILES += \
@@ -354,9 +353,6 @@ PRODUCT_PACKAGES += \
 # Preopted ODEX files (system_other)
 PRODUCT_PACKAGES += \
     cppreopts.sh
-
-# QTI Power HAL
-$(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
 
 # Public libraries
 PRODUCT_COPY_FILES += \
