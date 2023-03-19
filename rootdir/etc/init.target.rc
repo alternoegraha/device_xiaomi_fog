@@ -159,6 +159,9 @@ on property:sys.boot_completed=1
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
 
+on property:vendor.usb.controller=*
+    setprop sys.usb.controller ${vendor.usb.controller}
+
 on charger
     start vendor.power_off_alarm
     setprop vendor.usb.controller 4e00000.dwc3
