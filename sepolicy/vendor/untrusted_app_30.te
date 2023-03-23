@@ -1,0 +1,2 @@
+allow untrusted_app_30 sysfs_msm_subsys:dir { search };
+allow untrusted_app_30 sysfs_msm_subsys:file r_file_perms;

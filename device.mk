@@ -57,8 +57,7 @@ PRODUCT_PACKAGES += \
 
 # Audio Daemon
 PRODUCT_PACKAGES += \
-    audioadsprpcd \
-    vendor.qti.audio-adsprpc-service.rc
+    audioadsprpcd
 
 # Audio configs
 PRODUCT_COPY_FILES += \
@@ -359,9 +358,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     cppreopts.sh
 
-# QTI Power HAL
-$(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
-
 # Public libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -507,6 +503,8 @@ PRODUCT_COPY_FILES += \
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
+    android.hardware.wifi.hostapd \
+    android.hardware.wifi.supplicant \
     hostapd \
     libwpa_client \
     libwifi-hal-ctrl \
@@ -527,14 +525,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
-
-# WiFi Display
-PRODUCT_PACKAGES += \
-    libnl \
-    libwfdaac_vendor
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/fog/fog-vendor.mk)

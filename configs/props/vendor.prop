@@ -43,7 +43,7 @@ ro.vendor.audio.spk.clean=true
 ro.vendor.audio.surround.support=false
 ro.vendor.audio.vocal.support=false
 ro.vendor.audio.voice.change.support=true
-vendor.audio.adm.buffering.ms=2
+vendor.audio.adm.buffering.ms=6
 vendor.audio.dolby.ds2.enabled=false
 vendor.audio.dolby.ds2.hardbypass=false
 vendor.audio.enable.mirrorlink=false
@@ -108,7 +108,7 @@ vendor.audio.use.sw.mpegh.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
 vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_multiplier=3
-vendor.audio_hal.period_size=192
+vendor.audio_hal.period_size=240
 vendor.voice.path.for.pcm.voip=true
 
 # Bluetooth
@@ -168,6 +168,8 @@ debug.sf.high_fps_early_gl_phase_offset_ns=-5000000
 debug.sf.high_fps_early_phase_offset_ns=-5000000
 debug.sf.high_fps_late_app_phase_offset_ns=1000000
 debug.sf.high_fps_late_sf_phase_offset_ns=-5000000
+debug.sf.predict_hwc_composition_strategy=0
+debug.sf.treat_170m_as_sRGB=1
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.has_wide_color_display=true
@@ -224,11 +226,11 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sdm.support_writeback=0
+debug.sf.disable_backpressure=1
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.hw=0
-persist.sys.sf.color_mode=9
+persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
-persist.sys.sf.native_mode=258
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
@@ -273,6 +275,9 @@ persist.vendor.radio.snapshot_timer=5
 ro.telephony.default_network=22,20
 telephony.lteOnCdmaDevice=1
 
+# RIL
+vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
+
 # QSPM
 ro.vendor.qspm.enable=true
 
@@ -283,8 +288,8 @@ persist.vendor.sensors.enable.rt_task=false
 persist.vendor.sensors.hal_trigger_ssr=false
 persist.vendor.sensors.support_direct_channel=false
 
-# Time
-sys.vendor.shutdown.waittime=500
+# Thermal
+vendor.sys.thermal.data.path=/data/vendor/thermal/
 
 # USB
 vendor.usb.diag.func.name=diag
@@ -303,7 +308,7 @@ wifi.aware.interface=wifi-aware0
 ro.telephony.iwlan_operation_mode=legacy
 
 # SoC
-ro.soc.manufacturer=Qualcomm
+ro.soc.manufacturer=QTI
 ro.soc.model=SM6225
 
 # Zygote
