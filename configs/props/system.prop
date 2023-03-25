@@ -9,7 +9,6 @@ vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.goog
 vendor.camera.aux.packagelist.ext=org.codeaurora.snapcam,com.android.camera,com.google.camera
 
 # Charger
-persist.vendor.quick.charge=1
 ro.charger.disable_init_blank=true
 ro.charger.enable_suspend=true
 
@@ -68,6 +67,11 @@ media.stagefright.enable-scan=true
 media.stagefright.thumbnail.prefer_hw_codecs=true
 mmp.enable.3g2=true
 persist.mm.enable.prefetch=true
+ro.config.media_vol_default=10
+
+# Netflix
+ro.netflix.channel=004ee050-1a17-11e9-bb61-6f1da27fb55b
+ro.netflix.signup=1
 
 # Netmgr
 persist.data.netmgrd.qos.enable=true
@@ -86,6 +90,9 @@ ro.cp_system_other_odex=1
 # RIL
 DEVICE_PROVISIONED=1
 ril.subscription.types=NV,RUIM
+ro.telephony.default_network=33,33
+ro.vendor.radio.features_common=3
+telephony.lteOnCdmaDevice=1
 
 # Time-services
 persist.timed.enable=true
@@ -94,6 +101,10 @@ persist.timed.enable=true
 media.wfd.max_resolution=8
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
+
+# WLAN
+# 0: no dbs, 1: 1x1 dbs, 2: 2x2 dbs
+ro.hardware.wlan.dbs=0
 
 # ZRAM writeback
 ro.zram.mark_idle_delay_mins=60
