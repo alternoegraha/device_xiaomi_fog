@@ -31,7 +31,7 @@ ro.miui.                       u:object_r:exported_system_prop:s0
 ro.hardware.chipname           u:object_r:exported_default_prop:s0
 
 # Tethering
-persist.device_config.tethering.                u:object_r:device_config_tethering_prop:s0
+persist.device_config.         u:object_r:exported_default_prop:s0
 
 # WiFi
 ro.wlan.bdf                    u:object_r:vendor_public_vendor_default_prop:s0
