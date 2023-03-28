@@ -260,10 +260,9 @@ ro.vendor.se.type=HCE,UICC
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf-hal.ver=2.2
-ro.vendor.perf.scroll_opt=true
+
+# QSPM
 ro.vendor.qspm.enable=true
-vendor.power.pasr.enabled=true
-vendor.pasr.activemode.enabled=true
 
 # Radio
 persist.radio.multisim.config=dsds

@@ -262,6 +262,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-service \
     libavservices_minijail_vendor \
+    libavservices_minijail \
+    libavservices_minijail.vendor \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -336,24 +338,12 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Perf
-#PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
-
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    android.hardware.thermal@2.0 \
-    android.hardware.thermal@2.0.vendor \
-    libavservices_minijail \
-    libavservices_minijail.vendor \
-    libpsi.vendor \
-    libtflite \
-    vendor.qti.hardware.servicetracker@1.2.vendor
+    vendor.qti.hardware.perf@2.2.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
-    $(LOCAL_PATH)/configs/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml \
-    $(LOCAL_PATH)/configs/perf/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+    $(LOCAL_PATH)/configs/perf/perfconfigstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfconfigstore.xml
 
 # Preopted ODEX files (system_other)
 PRODUCT_PACKAGES += \
@@ -362,6 +352,11 @@ PRODUCT_PACKAGES += \
 # Public libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2.vendor \
+    android.hardware.power-service-qti
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -436,6 +431,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# Servicetracker
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.servicetracker@1.2.vendor
 
 # Telephony
 PRODUCT_PACKAGES += \
