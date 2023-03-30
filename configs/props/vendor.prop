@@ -267,6 +267,7 @@ ro.vendor.qspm.enable=true
 # Radio
 persist.radio.multisim.config=dsds
 persist.vendor.data.iwlan.enable=true
+persist.vendor.qti.telephony.vt_cam_interface=2
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.custom_ecc=1
@@ -277,9 +278,11 @@ persist.vendor.radio.manual_nw_rej_ct=1
 persist.vendor.radio.mt_sms_ack=30
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
+persist.vendor.radio.report_codec=1
 persist.vendor.radio.sib16_support=1
 persist.vendor.radio.snapshot_enabled=1
 persist.vendor.radio.snapshot_timer=5
+persist.vendor.radio.vdp_on_ims_cap=1
 
 # RIL
 vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
