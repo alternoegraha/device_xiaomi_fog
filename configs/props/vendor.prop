@@ -213,6 +213,7 @@ vendor.display.use_smooth_motion=0
 vendor.gralloc.disable_ubwc=0
 vendor.gralloc.secure_preview_buffer_format=420_sp
 debug.hwui.renderer=skiagl
+debug.renderengine.backend=skiaglthreaded
 
 # Display calib
 ro.vendor.display.sensortype=2
