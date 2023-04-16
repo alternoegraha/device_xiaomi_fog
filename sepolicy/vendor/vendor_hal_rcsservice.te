@@ -1,1 +1,0 @@
-add_hwservice(vendor_hal_rcsservice, vendor_hal_imscallinfo_hwservice)
