@@ -30,7 +30,6 @@ genfscon sysfs /devices/platform/soc/soc:qcom,gpubw/devfreq                     
 genfscon proc /tp_gesture                                                      u:object_r:proc_tp_gesture:s0
 
 # Extcon sysfs
-genfscon sysfs /devices/platform/soc/1610000.qcom,msm-eud/extcon               u:object_r:sysfs_extcon:s0
 genfscon sysfs /devices/platform/soc/4a88000.i2c/i2c-1/1-0055/extcon           u:object_r:sysfs_extcon:s0
 
 # Fingerprint
