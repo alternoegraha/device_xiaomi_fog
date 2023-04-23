@@ -131,10 +131,6 @@ on boot
     chown system system /proc/tp_gesture
     chmod 0644 /proc/tp_gesture
 
-    # IR device
-    chown system system /dev/spidev0.1
-    chmod 0660 /dev/spidev0.1
-
     # Battery health
     chown system system /sys/class/power_supply/battery/input_suspend
     chmod 0666 /sys/class/power_supply/battery/input_suspend
