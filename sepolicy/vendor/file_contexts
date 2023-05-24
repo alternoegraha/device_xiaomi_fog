@@ -26,7 +26,7 @@
 /dev/elliptic[0-9]                                                      u:object_r:sensors_device:s0
 
 # Fingerprint
-/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2.1-service\.fog                              u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2.3-service\.xiaomi                           u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/vendor\.silead\.hardware\.fingerprintext@1\.0-service                                    u:object_r:hal_fingerprint_default_exec:s0
 
 # Fingerprint - devices
