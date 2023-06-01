@@ -199,7 +199,7 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Graphics
 debug.egl.hw=0
-debug.hwui.renderer=skiagl
+debug.hwui.renderer=opengl
 debug.mdpcomp.logs=0
 debug.renderengine.backend=skiaglthreaded
 debug.sdm.support_writeback=0
