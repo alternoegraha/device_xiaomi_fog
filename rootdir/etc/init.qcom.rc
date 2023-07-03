@@ -69,13 +69,13 @@ on init
 
     # Disable absolute volume
     setprop persist.bluetooth.disableabsvol true
-    setprop persist.sys.btsatck.absvolfeature false
+    setprop persist.sys.btstack.absvolfeature false
     setprop persist.vendor.bt.a2dp.absvolfeature false
 
 on property:persist.vendor.bt.a2dp.absvolfeature=true
     setprop persist.vendor.bt.a2dp.absvolfeature false
-on property:persist.sys.btsatck.absvolfeature=true
-    setprop persist.sys.btsatck.absvolfeature false
+on property:persist.sys.btstack.absvolfeature=true
+    setprop persist.sys.btstack.absvolfeature false
 
 on post-fs
     mkdir /mnt/vendor/dsp 0770 root root
