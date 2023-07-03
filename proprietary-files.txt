@@ -1346,7 +1346,6 @@ vendor/etc/sensors/proto/sns_tilt.proto|27a7d4ba82dfb7058e06ea4460859fb53ed08e69
 vendor/etc/sensors/proto/sns_tilt_to_wake.proto|b598675e5ee2a8de4266d0efdbe8d22d78c2a5c9
 vendor/etc/sensors/proto/sns_ultra_violet.proto|60be3ed3b397385bd62e562b72f01fc7b887fb1e
 vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto|f35ad5c8ade4f36caa9a71dff2523ddaf2f2c7ed
-vendor/etc/sensors/hals.conf|bf3677cbfa5ce5735662e8c259cb027969f65c87
 vendor/etc/sensors/sns_reg_config|d516cd2088b375d75e83b3a6d093f6290396f4db
 vendor/etc/sensor_diag.cfg|ad39511c15df2a2279ddbb4f056071704b9ec891
 
