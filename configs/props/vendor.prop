@@ -17,6 +17,7 @@ persist.vendor.audio.spv3.enable=true
 persist.vendor.audio.voicecall.speaker.stereo=true
 ro.vendor.audio.afe.record=true
 ro.vendor.audio.misound.bluetooth.enable=true
+ro.vendor.audio.policy.engine.odm=true
 ro.vendor.audio.scenario.support=false
 ro.vendor.audio.sdk.fluencetype=none
 ro.vendor.audio.sdk.ssr=false
