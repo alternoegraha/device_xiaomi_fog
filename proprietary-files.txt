@@ -1387,6 +1387,7 @@ vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Thermal - from MIUI
+vendor/bin/mi_thermald|e3c9e29cf38cbd2751da29106f84f13fbe6b68db
 vendor/etc/thermal-4k.conf|5f18ad0fbc818f18cea35c218f6b71c1af804f78
 vendor/etc/thermal-arvr.conf|fb8c6da2fdff62b6cb3f96785617f2700f5310ac
 vendor/etc/thermal-camera.conf|0352ca93f860ae0c8e04ef5cf07f51abae7c087f
