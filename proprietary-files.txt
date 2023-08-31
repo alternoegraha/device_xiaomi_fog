@@ -1,4 +1,4 @@
-# All MIUI blobs below are extracted from miui_FOGGlobal_V13.0.8.0.SGEMIXM_6cb016ff3d_12.0
+# All MIUI blobs below are extracted from miui_FOGGlobal_V14.0.3.0.TGEMIXM_f8ab7d38c5_13.0
 
 # ACDB - from MIUI
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Bluetooth_cal.acdb|0cc92d7ce081e30ccaa203b3591f592d7ca36a6d
