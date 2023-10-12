@@ -36,13 +36,6 @@
         <fqname>@1.0::IMemtrack/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.neuralnetworks</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.2::IDevice/qti-default</fqname>
-        <fqname>@1.2::IDevice/qti-dsp</fqname>
-        <fqname>@1.2::IDevice/qti-gpu</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
         <fqname>@1.2::ISap/slot1</fqname>
