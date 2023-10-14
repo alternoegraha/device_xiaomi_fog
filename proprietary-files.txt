@@ -972,6 +972,10 @@ vendor/lib64/libperipheral_client.so
 # Power-off charging daemon - from MIUI
 bin/charger:bin/chargeonlymode|ab71ddd91d39f5ffc4ee640aa7dfad0a6396d4bd
 
+# Protobuf - from MIUI
+vendor/lib/libprotobuf-cpp-lite-3.9.1.so
+vendor/lib64/libprotobuf-cpp-lite-3.9.1.so
+
 # QCC
 vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service
 vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc
