@@ -2,5 +2,5 @@ runtime_resource_overlay {
     name: "DialerFog",
     theme: "DialerFog",
     sdk_version: "current",
-    vendor: true,
+    product_specific: true,
 }
