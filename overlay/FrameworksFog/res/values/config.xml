@@ -65,7 +65,7 @@
         the screen brightness is recalculated. See the config_ambientThresholdLevels
         description for how the constraint value is chosen. -->
     <integer-array name="config_ambientBrighteningThresholds">
-        <item>2</item>
+        <item>4</item>
         <item>5</item>
         <item>10</item>
         <item>30</item>
@@ -110,72 +110,6 @@
         <item>800</item>
         <item>2000</item>
         <item>4000</item>
-    </integer-array>
-
-    <!-- Array of output values for LCD backlight corresponding to the lux values
-         in the config_autoBrightnessLevels array.  This array should have size one greater
-         than the size of the config_autoBrightnessLevels array.
-         The brightness values must be between 0 and 255 and be non-decreasing.
-         This must be overridden in platform specific overlays -->
-    <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>18</item>
-        <item>25</item>
-        <item>31</item>
-        <item>77</item>
-        <item>107</item>
-        <item>138</item>
-        <item>184</item>
-        <item>266</item>
-        <item>363</item>
-        <item>445</item>
-        <item>496</item>
-        <item>502</item>
-        <item>502</item>
-        <item>502</item>
-        <item>507</item>
-        <item>507</item>
-        <item>512</item>
-        <item>512</item>
-        <item>512</item>
-        <item>517</item>
-        <item>517</item>
-        <item>522</item>
-        <item>527</item>
-        <item>527</item>
-        <item>527</item>
-        <item>542</item>
-        <item>553</item>
-        <item>563</item>
-        <item>573</item>
-        <item>583</item>
-        <item>594</item>
-        <item>604</item>
-        <item>609</item>
-        <item>624</item>
-        <item>629</item>
-        <item>640</item>
-        <item>655</item>
-        <item>665</item>
-        <item>670</item>
-        <item>686</item>
-        <item>696</item>
-        <item>701</item>
-        <item>716</item>
-        <item>727</item>
-        <item>737</item>
-        <item>865</item>
-        <item>1003</item>
-        <item>1136</item>
-        <item>1269</item>
-        <item>1382</item>
-        <item>1535</item>
-        <item>1638</item>
-        <item>1714</item>
-        <item>2047</item>
-        <item>2047</item>
-        <item>2047</item>
-        <item>2047</item>
-        <item>2047</item>
     </integer-array>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
@@ -344,63 +278,9 @@
         brightness modes but only the maximum brightness value obtainable in a sustainable manner.
         This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
-        <item>2</item>
-        <item>400</item>
+        <item>2.0</item>
+        <item>700.0</item>
     </array>
-
-    <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
-        percent. The length of this array is assumed to be one greater than
-        config_dynamicHysteresisLuxLevels. The brightening threshold is calculated as
-        lux * (1.0f + CONSTRAINT_VALUE). When the current lux is higher than this threshold,
-        the screen brightness is recalculated. See the config_dynamicHysteresisLuxLevels
-        description for how the constraint value is chosen. -->
-    <integer-array name="config_dynamicHysteresisBrightLevels">
-        <item>2000</item>
-        <item>2000</item>
-        <item>1000</item>
-        <item>1000</item>
-        <item>500</item>
-        <item>500</item>
-        <item>500</item>
-        <item>500</item>
-    </integer-array>
-
-    <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
-        percent. The length of this array is assumed to be one greater than
-        config_dynamicHysteresisLuxLevels. The darkening threshold is calculated as
-        lux * (1.0f - CONSTRAINT_VALUE). When the current lux is lower than this threshold,
-        the screen brightness is recalculated. See the config_dynamicHysteresisLuxLevels
-        description for how the constraint value is chosen. -->
-    <integer-array name="config_dynamicHysteresisDarkLevels">
-        <item>800</item>
-        <item>800</item>
-        <item>800</item>
-        <item>800</item>
-        <item>800</item>
-        <item>500</item>
-        <item>500</item>
-        <item>500</item>
-    </integer-array>
-
-    <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
-        values by calculating the index to use for lookup and then setting the constraint value
-        to the corresponding value of the array. The new brightening hysteresis constraint value
-        is the n-th element of config_dynamicHysteresisBrightLevels, and the new darkening
-        hysteresis constraint value is the n-th element of config_dynamicHysteresisDarkLevels.
-        The (zero-based) index is calculated as follows: (MAX is the largest index of the array)
-        condition                      calculated index
-        value < lux[0]                 0
-        lux[n] <= value < lux[n+1]     n+1
-        lux[MAX] <= value              MAX+1 -->
-    <integer-array name="config_dynamicHysteresisLuxLevels">
-        <item>2</item>
-        <item>10</item>
-        <item>30</item>
-        <item>100</item>
-        <item>800</item>
-        <item>2000</item>
-        <item>4000</item>
-    </integer-array>
 
     <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
         percent. The length of this array is assumed to be one greater than
@@ -426,28 +306,20 @@
         auto-brightness adjustment setting. -->
     <fraction name="config_autoBrightnessAdjustmentMaxGamma">100.0%</fraction>
 
-    <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
-        for debouncing the light sensor.  Different constants are used to debounce the light sensor
-        when adapting to brighter or darker environments.  This parameter controls how quickly
-        brightness changes occur in response to an observed change in light level that exceeds the
-        hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
-
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
     <integer name="config_screenBrightnessSettingDefault">102</integer>
-
-    <!-- Maximum screen brightness allowed by the power manager.
-        The user is forbidden from setting the brightness above this level. -->
-    <integer name="config_screenBrightnessSettingMaximum">225</integer>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
         The user is forbidden from setting the brightness below this level. -->
     <integer name="config_screenBrightnessSettingMinimum">8</integer>
 
+    <!-- Maximum screen brightness allowed by the power manager.
+        The user is forbidden from setting the brightness above this level. -->
+    <integer name="config_screenBrightnessSettingMaximum">225</integer>
+
     <!-- Minimum screen brightness allowed by the power manager. -->
-    <integer name="config_screenBrightnessDim">13</integer>
+    <integer name="config_screenBrightnessDim">8</integer>
 
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
@@ -725,6 +597,12 @@
     <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
     <string name="config_SmartChargingSuspendValue" translatable="false">1</string>
     <string name="config_SmartChargingResumeValue" translatable="false">0</string>
+
+    <!-- Flag indicating whether the surface flinger has limited
+         alpha compositing functionality in hardware.  If set, the window
+         manager will disable alpha trasformation in animations where not
+         strictly needed. -->
+    <bool name="config_sf_limitedAlpha">true</bool>
 
     <!-- Determines whether the shell features all run on another thread. -->
     <bool name="config_enableShellMainThread">true</bool>
