@@ -78,6 +78,7 @@ TARGET_USES_ION := true
 
 # DTBO image
 BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
 # FM
 BOARD_HAVE_QCOM_FM := true
@@ -96,7 +97,7 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_fog
 
 # Kernel
 BOARD_KERNEL_BASE        := 0x00000000
-BOARD_KERNEL_IMAGE_NAME  := Image
+BOARD_KERNEL_IMAGE_NAME  := Image.gz
 BOARD_KERNEL_OFFSET      := 0x00008000
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_RAMDISK_OFFSET     := 0x01000000
@@ -104,10 +105,8 @@ BOARD_TAGS_OFFSET        := 0x00000100
 
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
-BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 
 BOARD_KERNEL_CMDLINE += \
-    androidboot.fstab_suffix=qcom \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=4e00000.dwc3 \
@@ -118,16 +117,12 @@ BOARD_KERNEL_CMDLINE += \
     swiotlb=2048 \
     cgroup_disable=pressure
 
-# Kernel headers
-TARGET_KERNEL_CONFIG := vendor/bengal_defconfig
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_CONFIG := vendor/fog-perf_defconfig
 TARGET_KERNEL_HEADERS := kernel/xiaomi/fog
 TARGET_KERNEL_SOURCE := kernel/xiaomi/fog
-TARGET_KERNEL_VERSION := 4.19
-
-# Kernel prebuilt
-TARGET_FORCE_PREBUILT_KERNEL := true
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_LINUX_KERNEL_VERSION := 4.19
 
 # Media
 TARGET_DISABLED_UBWC := true
