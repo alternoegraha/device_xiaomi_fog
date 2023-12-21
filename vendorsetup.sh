@@ -7,8 +7,8 @@ git clone -b lineage-20-new https://github.com/alternoegraha/vendor_xiaomi_fog v
 # Clone kernel tree (Sea kernel by Asyanx)
 git clone https://github.com/Asyanx/Sea_Kernel-Fog kernel/xiaomi/fog
 
-# Clone my fork of hardware/xiaomi
-# git clone https://github.com/alternoegraha/hardware_xiaomi hardware/xiaomi
+# Clone hardware/xiaomi from PE
+git clone https://github.com/PixelExperience/hardware_xiaomi hardware/xiaomi
 
 # Kernel fixups
 cd kernel/xiaomi/fog
