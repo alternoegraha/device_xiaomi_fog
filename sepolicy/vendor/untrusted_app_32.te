@@ -2,3 +2,6 @@ allow untrusted_app_32 app_data_file:file { execute };
 allow untrusted_app_32 sysfs_msm_subsys:dir { search };
 allow untrusted_app_32 sysfs_msm_subsys:file r_file_perms;
 allow untrusted_app_32 zygote:unix_stream_socket { getopt };
+
+get_prop(untrusted_app_32, qemu_hw_prop);
+get_prop(untrusted_app_32, qemu_sf_lcd_density_prop);
