@@ -15,7 +15,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := false
 
 # EvoX stuff
-TARGET_USES_PICO_GAPPS := true
+# TARGET_USES_PICO_GAPPS := true
 TARGET_INCLUDE_GRAMOPHONE := true
 
 # Inherit from fog device
