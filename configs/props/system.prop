@@ -64,7 +64,7 @@ ro.lmk.thrashing_limit_decay=50
 
 # Media
 media.aac_51_output_enabled=true
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+media.settings.xml=/vendor/etc/media_profiles_khaje.xml
 media.stagefright.enable-aac=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-http=true
