@@ -1,6 +1,7 @@
 # Bluetooth
 persist.bluetooth.disableabsvol=true
 persist.sys.btstack.absvolfeature=false
+persist.vendor.bt.a2dp.absvolfeature=false
 vendor.bluetooth.soc=cherokee
 
 # Camera
