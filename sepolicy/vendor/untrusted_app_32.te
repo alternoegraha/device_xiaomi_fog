@@ -1,4 +1,5 @@
 allow untrusted_app_32 app_data_file:file { execute };
+allow untrusted_app_32 shell_test_data_file:dir { search };
 allow untrusted_app_32 sysfs_msm_subsys:dir { search };
 allow untrusted_app_32 sysfs_msm_subsys:file r_file_perms;
 allow untrusted_app_32 zygote:unix_stream_socket { getopt };
