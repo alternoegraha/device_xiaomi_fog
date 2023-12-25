@@ -1,5 +1,4 @@
 # Audio
-audio_para_version=C3Q-Audiopara-V01-20211102
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=2
@@ -212,9 +211,6 @@ ro.opengles.version=196610
 vendor.gralloc.disable_ubwc=0
 vendor.gralloc.secure_preview_buffer_format=420_sp
 
-# Media
-vendor.mm.enable.qcom_parser=16777215
-
 # Media Codecs
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
@@ -233,7 +229,6 @@ ro.vendor.extension_library=libqti-perfd-client.so
 # Radio
 persist.radio.multisim.config=dsds
 persist.vendor.data.iwlan.enable=true
-persist.vendor.qti.telephony.vt_cam_interface=2
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.custom_ecc=1
