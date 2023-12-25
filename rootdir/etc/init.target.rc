@@ -153,12 +153,9 @@ on boot
     chmod 0666 /sys/class/power_supply/battery/input_suspend
 
     # USB controller configuration
-    setprop vendor.usb.rndis.func.name "gsi"
-    setprop vendor.usb.rmnet.func.name "gsi"
-    setprop vendor.usb.rmnet.inst.name "rmnet"
-    setprop vendor.usb.dpl.inst.name "dpl"
-    setprop vendor.usb.qdss.inst.name "qdss"
     setprop vendor.usb.controller 4e00000.dwc3
+
+    # Thermal
     start mi_thermald
     start vendor.sensors
 
