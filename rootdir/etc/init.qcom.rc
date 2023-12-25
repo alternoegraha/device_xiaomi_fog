@@ -68,16 +68,6 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
-    # Disable absolute volume
-    setprop persist.bluetooth.disableabsvol true
-    setprop persist.sys.btstack.absvolfeature false
-    setprop persist.vendor.bt.a2dp.absvolfeature false
-
-on property:persist.vendor.bt.a2dp.absvolfeature=true
-    setprop persist.vendor.bt.a2dp.absvolfeature false
-on property:persist.sys.btstack.absvolfeature=true
-    setprop persist.sys.btstack.absvolfeature false
-
 on post-fs
     mkdir /mnt/vendor/dsp 0770 root root
     copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
