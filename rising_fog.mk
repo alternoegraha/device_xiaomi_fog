@@ -9,15 +9,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/rising/config/rising.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := false
 
+# RisingOS flags
+WITH_GMS := true
+TARGET_CORE_GMS := true
+TARGET_PREBUILT_PIXEL_LAUNCHER := true
+TARGET_ENABLE_PIXEL_FEATURES := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+RISING_MAINTAINER := AlterNoegraha
+RISING_CHIPSET := Snapdragon680
+RISING_BATTERY := 5000mAh
+RISING_DISPLAY := 720×1650
+
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-PRODUCT_NAME := aosp_fog
+PRODUCT_NAME := rising_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi

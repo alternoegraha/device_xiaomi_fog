@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_fog.mk
+    $(LOCAL_DIR)/rising_fog.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_fog-user \
-    aosp_fog-userdebug \
-    aosp_fog-eng
+    rising_fog-user \
+    rising_fog-userdebug \
+    rising_fog-eng
