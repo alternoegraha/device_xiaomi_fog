@@ -99,6 +99,12 @@ genfscon sysfs /devices/platform/soc/4e00000.ssusb/power/wakeup                 
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,power-on@800/power/wakeup                                                u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc/power/wakeup                                                  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-01/1c40000.qcom,spmi:qcom,pm6125l@1:qcom,power-on@800/wakeup                                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0055/power_supply/bms/wakeup                                                                                                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a88000.i2c/i2c-1/1-0055/power_supply/ac/wakeup                                                                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a88000.i2c/i2c-1/1-0055/power_supply/battery/wakeup                                                                                            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a88000.i2c/i2c-1/1-0055/power_supply/usb/wakeup                                                                                                u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a88000.i2c/i2c-1/1-0055/wakeup                                                                                                                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/input/input4/wakeup                                                                                                                                  u:object_r:sysfs_wakeup:s0
 
 # vibrate
 genfscon sysfs /devices/platform/soc/soc:pwm_vibrator/leds/vibrator/activate                                                                                                         u:object_r:sysfs_leds:s0
