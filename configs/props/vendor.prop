@@ -200,7 +200,7 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Graphics
 debug.egl.hw=0
-debug.hwui.renderer=skiagl
+debug.hwui.renderer=skiavk
 debug.mdpcomp.logs=0
 debug.sdm.support_writeback=0
 persist.sys.sf.color_mode=0

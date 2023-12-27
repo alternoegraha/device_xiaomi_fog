@@ -41,6 +41,7 @@ sys.fp.miui.token=0
 ro.vendor.qti.va_aosp.support=1
 
 # Graphics
+graphics.gpu.profiler.support=true
 persist.demo.hdmirotationlock=false
 
 # IMS
