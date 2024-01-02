@@ -10,6 +10,11 @@ git clone https://github.com/Asyanx/Sea_Kernel-Fog kernel/xiaomi/fog
 # Clone hardware/xiaomi from PE
 git clone https://github.com/PixelExperience/hardware_xiaomi hardware/xiaomi
 
+# Revert "audio: Use TARGET_HALS_PATH"
+cd hardware/qcom-caf/bengal/audio
+git revert 29922217e247c35c465f7d0f7c606ea7a442521e
+cd ../../../../
+
 # Kernel fixups
 cd kernel/xiaomi/fog
 ## Revert "treewide: Fix all coding errors found by GCC 11.2.1"
