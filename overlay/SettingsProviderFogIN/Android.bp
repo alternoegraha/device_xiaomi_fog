@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "SettingsProviderFogIN",
+    theme: "SettingsProviderFogIN",
+    sdk_version: "current",
+    product_specific: true,
+}
