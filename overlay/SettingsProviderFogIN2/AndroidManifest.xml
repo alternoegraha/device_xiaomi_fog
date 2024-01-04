@@ -4,7 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.settingsprovider.overlay.fog_in">
+    package="com.android.settingsprovider.overlay.fog_in2">
 
     <application android:hasCode="false" />
 
@@ -12,6 +12,6 @@
         android:isStatic="true"
         android:priority="1"
         android:requiredSystemPropertyName="ro.boot.hwname"
-        android:requiredSystemPropertyValue="fog_in"
+        android:requiredSystemPropertyValue="fog_in2"
         android:targetPackage="com.android.providers.settings" />
 </manifest>
