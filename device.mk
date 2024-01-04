@@ -347,6 +347,10 @@ PRODUCT_PACKAGES += \
     FrameworksFog \
     SettingsFog \
     SettingsProviderFog \
+    SettingsProviderFogCommon \
+    SettingsProviderFogIN \
+    SettingsProviderRain \
+    SettingsProviderWind \
     SystemUIFog \
     TelephonyFog \
     WifiFog
