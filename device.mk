@@ -348,6 +348,7 @@ PRODUCT_PACKAGES += \
     SettingsProviderFog \
     SettingsProviderFogCommon \
     SettingsProviderFogIN \
+    SettingsProviderFogIN2 \
     SettingsProviderRain \
     SettingsProviderWind \
     SystemUIFog \
