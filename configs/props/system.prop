@@ -1,4 +1,7 @@
 # Bluetooth
+persist.bluetooth.disableabsvol=true
+persist.sys.btstack.absvolfeature=false
+persist.vendor.bt.a2dp.absvolfeature=false
 vendor.bluetooth.soc=cherokee
 
 # Camera
@@ -13,10 +16,12 @@ ro.charger.disable_init_blank=true
 ro.charger.enable_suspend=true
 
 # Display
+debug.cpurend.vsync=false
 debug.hwui.skia_atrace_enabled=false
 debug.sf.enable_hwc_vds=0
 debug.sf.auto_latch_unsignaled=0
 debug.sf.latch_unsignaled=1
+ro.surface_flinger.supports_background_blur=0
 
 # CNE
 persist.cne.feature=1
@@ -61,7 +66,7 @@ ro.lmk.thrashing_limit_decay=50
 
 # Media
 media.aac_51_output_enabled=true
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+media.settings.xml=/vendor/etc/media_profiles_khaje.xml
 media.stagefright.enable-aac=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-http=true

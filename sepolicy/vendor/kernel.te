@@ -5,3 +5,4 @@ allow kernel vendor_firmware_file:lnk_file read;
 allow kernel vendor_file:file r_file_perms;
 
 dontaudit kernel mnt_vendor_file:dir search;
+dontaudit kernel self:capability { dac_override dac_read_search };

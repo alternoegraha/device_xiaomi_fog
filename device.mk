@@ -11,7 +11,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Enable virtual A/B OTA
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
+PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := brotli
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -197,6 +198,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
+# GrapheneCamera
+PRODUCT_PACKAGES += \
+    GrapheneCamera
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -346,6 +351,11 @@ PRODUCT_PACKAGES += \
     FrameworksFog \
     SettingsFog \
     SettingsProviderFog \
+    SettingsProviderFogCommon \
+    SettingsProviderFogIN \
+    SettingsProviderFogIN2 \
+    SettingsProviderRain \
+    SettingsProviderWind \
     SystemUIFog \
     TelephonyFog \
     WifiFog
