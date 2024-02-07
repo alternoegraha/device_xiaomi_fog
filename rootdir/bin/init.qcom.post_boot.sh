@@ -52,8 +52,8 @@ function configure_read_ahead_kb_values() {
 
 # Check for less than 4GB RAM and set 200 swappiness
     if [ "$(cat /proc/meminfo | grep MemTotal | awk '{print $2}')" -le "4194304" ]; then
-        # Set swappiness to 200
-        echo 200 > /proc/sys/vm/swappiness
+        # Set swappiness to 150
+        echo 150 > /proc/sys/vm/swappiness
     else
         # Set swappiness to 100 for more than 4gb RAM
         echo 100 > /proc/sys/vm/swappiness
