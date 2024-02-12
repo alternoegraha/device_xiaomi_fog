@@ -342,6 +342,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigFog \
     DialerFog \
     FrameworksFog \
+    NoCutoutOverlay \
     SettingsFog \
     SettingsProviderFog \
     SettingsProviderFogCommon \
