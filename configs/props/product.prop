@@ -4,5 +4,11 @@ audio.offload.min.duration.secs=30
 audio.sys.offload.pstimeout.secs=3
 ro.config.vc_call_vol_steps=11
 
+# LMK
+ro.lmk.kill_timeout_ms=15
+ro.lmk.log_stats=true
+ro.lmk.kill_heaviest_task=true
+ro.lmk.use_minfree_levels=true
+
 # Radio
 persist.vendor.qti.telephony.vt_cam_interface=2
