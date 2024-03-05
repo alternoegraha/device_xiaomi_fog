@@ -15,3 +15,7 @@ cd kernel/xiaomi/fog
 rm -rf Android.bp
 rm -rf techpack/audio/Android.bp
 cd ../../..
+
+# Audio HAL fixup
+rm -rf hardware/qcom-caf/bengal/audio
+git clone https://github.com/alternoegraha/hardware_qcom-caf_bengal_audio hardware/qcom-caf/bengal/audio
