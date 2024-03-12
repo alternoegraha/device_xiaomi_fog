@@ -10,9 +10,7 @@ ro.launcher.blur.appLaunch=0
 # Camera
 camera.disable_zsl_mode=true
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.lineageos.aperture
-sys.cameratest.cameralevel=1
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.camera,org.lineageos.aperture
-vendor.camera.aux.packagelist.ext=org.codeaurora.snapcam,com.android.camera,com.google.camera
 
 # Charger
 ro.charger.disable_init_blank=true
