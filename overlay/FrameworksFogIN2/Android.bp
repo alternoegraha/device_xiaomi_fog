@@ -15,5 +15,5 @@
 runtime_resource_overlay {
     name: "FrameworksFogIN2",
     sdk_version: "current",
-    product_specific: true,
+    vendor: true,
 }
