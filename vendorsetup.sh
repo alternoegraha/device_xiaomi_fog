@@ -10,6 +10,9 @@ git clone --depth=1 https://github.com/alternoegraha/wwy_kernel_xiaomi_fog_rebas
 # Clone hardware/xiaomi
 git clone https://github.com/PixelExperience/hardware_xiaomi hardware/xiaomi
 
+# Clone MIUICamera
+git clone --depth=1 https://gitlab.com/alternoegraha/proprietary_vendor_xiaomi_camera vendor/xiaomi/camera
+
 # Kernel fixups
 cd kernel/xiaomi/fog
 rm -rf Android.bp
