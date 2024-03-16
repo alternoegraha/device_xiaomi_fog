@@ -4,19 +4,14 @@ rm -rf hardware/google/pixel/kernel_headers/Android.bp
 # Clone vendor tree
 git clone https://github.com/alternoegraha/vendor_xiaomi_fog vendor/xiaomi/fog
 
-# Clone kernel tree (Sea kernel by Asyanx)
-git clone -b fog-r-oss-release https://github.com/Asyanx/Sea_Kernel-Fog kernel/xiaomi/fog
+# Clone kernel tree
+git clone --depth=1 https://github.com/alternoegraha/wwy_kernel_xiaomi_fog_rebase kernel/xiaomi/fog
 
 # Clone my fork of hardware/xiaomi
 # git clone https://github.com/alternoegraha/hardware_xiaomi hardware/xiaomi
 
 # Kernel fixups
 cd kernel/xiaomi/fog
-## Revert Makefile: fix error when compile use clang
-git revert --no-commit ef00d1f
-## Revert "treewide: Fix all coding errors found by GCC 11.2.1"
-git revert --no-commit 91dc89f
-## Revert "kernel: Fix error when compile use GCC"
-git revert --no-commit 7d72ccb
-sed -i 's+R¹.+R0/Amethyst+' arch/arm64/configs/vendor/fog-perf_defconfig # rebrand to fix kernel compilation issue during build
-cd ../../../
+rm -rf Android.bp
+rm -rf techpack/audio/Android.bp
+cd ../../..
