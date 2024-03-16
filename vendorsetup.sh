@@ -7,8 +7,8 @@ git clone -b thirteen https://github.com/alternoegraha/vendor_xiaomi_fog vendor/
 # Clone kernel tree
 git clone --depth=1 https://github.com/alternoegraha/wwy_kernel_xiaomi_fog_rebase kernel/xiaomi/fog
 
-# Clone my fork of hardware/xiaomi
-# git clone https://github.com/alternoegraha/hardware_xiaomi hardware/xiaomi
+# Clone LineageOS' hardware/xiaomi
+git clone -b lineage-20 https://github.com/LineageOS/android_hardware_xiaomi hardware/xiaomi
 
 # Kernel fixups
 cd kernel/xiaomi/fog
