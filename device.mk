@@ -257,6 +257,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-service \
     android.hardware.media.omx@1.0.vendor \
+    android.media.audio.common.types-V2-cpp \
     libavservices_minijail_vendor \
     libavservices_minijail \
     libavservices_minijail.vendor \
