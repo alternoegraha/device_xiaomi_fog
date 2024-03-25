@@ -26,6 +26,9 @@
     <!-- the padding on the end of the statusbar -->
     <dimen name="status_bar_padding_end">0dp</dimen>
 
+    <!-- The starting padding for the clock in the status bar. -->
+    <dimen name="status_bar_clock_starting_padding">2dp</dimen>
+
     <!-- rounded corner content padding -->
     <dimen name="rounded_corner_content_padding">16px</dimen>
 
