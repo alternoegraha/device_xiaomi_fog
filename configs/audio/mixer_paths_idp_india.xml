@@ -2610,15 +2610,6 @@
         <ctl name="ADC2_MIXER Switch" value="1" />
         <ctl name="ADC2 MUX" value="INP2" />
     </path>
-
-    <path name="amic3">
-        <ctl name="TX DEC1 MUX" value="SWR_MIC" />
-        <ctl name="TX SMIC MUX1" value="SWR_MIC4" />
-        <ctl name="TX_AIF1_CAP Mixer DEC1" value="1" />
-        <ctl name="ADC2_MIXER Switch" value="1" />
-        <ctl name="ADC2 MUX" value="INP3" />
-        <ctl name="TX_CDC_DMA_TX_3 Channels" value="One" />
-    </path>
     <!-- lct modify end-->
 
     <path name="dmic1">
@@ -2716,7 +2707,7 @@
 
     <!-- lct modify -->
     <path name="speaker-mic">
-        <path name="amic3" />
+        <path name="amic1" />
         <ctl name="ADC1 Volume" value="8" />
     </path>
 
@@ -2742,10 +2733,7 @@
 
     <path name="handset-mic">
         <path name="amic1" />
-        <path name="amic3" />
         <ctl name="ADC1 Volume" value="8" />
-        <ctl name="ADC2 Volume" value="8" />
-        <ctl name="TX_CDC_DMA_TX_3 Channels" value="Two" />
     </path>
 
     <path name="voice-handset-mic">
@@ -2755,10 +2743,7 @@
 
     <path name="record-mic">
         <path name="amic1" />
-        <path name="amic3" />
         <ctl name="ADC1 Volume" value="8" />
-        <ctl name="ADC2 Volume" value="8" />
-        <ctl name="TX_CDC_DMA_TX_3 Channels" value="Two" />
     </path>
 
     <path name="handset-mic-factory">
