@@ -308,10 +308,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
 
-# Notch bar killer
-PRODUCT_PACKAGES += \
-    NotchBarKiller
-
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
