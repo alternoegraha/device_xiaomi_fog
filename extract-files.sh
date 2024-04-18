@@ -71,6 +71,9 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libhidlbase.so" "${2}"
             sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
             ;;
+        vendor/etc/init/vendor.sensors.sscrpcd.rc)
+            sed -i 's|class early_hal|class core|g' "${2}"
+            ;;
     esac
 }
 
