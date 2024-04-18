@@ -77,6 +77,9 @@ function blob_fixup() {
         vendor/lib64/mediadrm/libwvdrmengine.so)
             "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
             ;;
+        vendor/etc/init/vendor.sensors.sscrpcd.rc)
+            sed -i 's|class early_hal|class core|g' "${2}"
+            ;;
     esac
 }
 
