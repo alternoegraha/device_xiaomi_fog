@@ -522,6 +522,9 @@
         <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
     </string-array>
 
+    <!-- Bytes that the PinnerService will pin for Home app -->
+    <integer name="config_pinnerHomePinBytes">6291456</integer>
+
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
