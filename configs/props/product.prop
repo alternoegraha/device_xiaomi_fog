@@ -16,5 +16,8 @@ ro.lmk.psi_complete_stall_ms=120
 ro.lmk.psi_partial_stall_ms=50
 ro.lmk.filecache_min_kb=300000
 
+# Phantom process monitoring
+sys.fflag.override.settings_enable_monitor_phantom_procs=false
+
 # Radio
 persist.vendor.qti.telephony.vt_cam_interface=2
