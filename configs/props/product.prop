@@ -5,7 +5,7 @@ audio.sys.offload.pstimeout.secs=3
 ro.config.vc_call_vol_steps=11
 
 # LMKD
-ro.lmk.kill_heaviest_task=false
+ro.lmk.kill_heaviest_task=true
 ro.lmk.swap_util_max=90
 ro.lmk.thrashing_limit=30
 ro.lmk.thrashing_limit_decay=25
