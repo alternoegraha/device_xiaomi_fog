@@ -664,4 +664,16 @@
 
     <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
     <integer name="config_screenRecorderMaxFramerate">60</integer>
+
+    <!-- The list of package IDs that are not allowed to use aux cameras. -->
+    <string-array name="config_cameraAuxPackageExcludeList" translatable="false">
+        <item>org.telegram.messenger</item>
+        <item>org.telegram.messenger.web</item>
+        <item>tw.nekomimi.nekogram</item>
+        <item>com.exteragram.messenger</item>
+        <item>org.thunderdog.challegram</item>
+        <item>com.microsoft.teams</item>
+        <item>com.discord</item>
+        <item>us.zoom.videomeetings</item>
+     </string-array>
 </resources>
