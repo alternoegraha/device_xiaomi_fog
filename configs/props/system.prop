@@ -89,6 +89,10 @@ telephony.lteOnCdmaDevice=1
 # Time-services
 persist.timed.enable=true
 
+# WFD settings
+persist.debug.wfd.enable=1
+persist.sys.wfd.virtual=0
+
 # WLAN
 # 0: no dbs, 1: 1x1 dbs, 2: 2x2 dbs
 ro.hardware.wlan.dbs=0
