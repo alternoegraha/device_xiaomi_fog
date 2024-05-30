@@ -673,6 +673,7 @@
         <item>com.google.camera</item>
         <item>org.lineageos.aperture</item>
         <item>org.lineageos.aperture.dev</item>
+        <item>app.grapheneos.camera</item>
     </string-array>
 
     <!-- The list of package IDs that are not allowed to use aux cameras. -->
