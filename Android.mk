@@ -29,17 +29,9 @@ $(DSP_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating $(DSP_MOUNT_POINT)"
 	@mkdir -p $(TARGET_OUT_VENDOR)/dsp
 
-# Symlinks
-ACDBDATA_SYMLINKS := $(TARGET_OUT_ODM)/etc/acdbdata
-$(ACDBDATA_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating acdbdata symlinks: $@"
-	@mkdir -p $@
-	$(hide) ln -sf /vendor/etc/acdbdata/adsp_avs_config.acdb $@/adsp_avs_config.acdb
-
 ALL_DEFAULT_INSTALLED_MODULES += \
     $(FIRMWARE_MOUNT_POINT) \
     $(BT_FIRMWARE_MOUNT_POINT) \
-    $(DSP_MOUNT_POINT) \
-    $(ACDBDATA_SYMLINKS)
+    $(DSP_MOUNT_POINT)
 
 endif
