@@ -39,9 +39,12 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
+    libaudioroute.vendor \
+    libprocessgroup.vendor \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
+    libstagefright_softomx_plugin.vendor \
     libtinycompress
 
 # Audio Daemon
