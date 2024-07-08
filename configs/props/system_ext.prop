@@ -3,6 +3,8 @@ persist.vendor.dpm.feature=11
 
 # Media
 vendor.mm.enable.qcom_parser=16777215
+vendor.media.target.version=3
+vendor.media.target_variant=_khaje
 
 # Telephony
 ro.telephony.sim_slots.count=2
