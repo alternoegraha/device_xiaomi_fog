@@ -134,6 +134,9 @@ ro.vendor.bluetooth.wipower=false
 vendor.hw.fm.init=0
 vendor.qcom.bluetooth.soc=cherokee
 
+# Camera
+persist.vendor.camera.perflock.enable=0
+
 # Charger
 persist.vendor.quick.charge=1
 
