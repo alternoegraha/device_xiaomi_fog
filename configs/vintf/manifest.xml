@@ -49,6 +49,15 @@
         <fqname>@2.0::ISoundTriggerHw/default</fqname>
         <fqname>@2.3::ISoundTriggerHw/default</fqname>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.tetheroffload.config</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOffloadConfig</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>com.dsi.ant</name>
         <transport>hwbinder</transport>
