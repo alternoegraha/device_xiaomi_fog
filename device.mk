@@ -349,7 +349,6 @@ PRODUCT_PACKAGES += \
     DialerFog \
     FrameworksFog \
     FrameworksFogIN2 \
-    LineageSDKFog \
     NoCutoutOverlay \
     SettingsFog \
     SettingsProviderFog \

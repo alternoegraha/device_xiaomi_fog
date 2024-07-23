@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_fog.mk
+    $(LOCAL_DIR)/aosp_fog.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_fog-ap2a-user \
-    lineage_fog-ap2a-userdebug \
-    lineage_fog-ap2a-eng
+    aosp_fog-user \
+    aosp_fog-userdebug \
+    aosp_fog-eng
