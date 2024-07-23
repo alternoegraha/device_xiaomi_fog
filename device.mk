@@ -345,7 +345,7 @@ PRODUCT_PACKAGES += \
     DialerFog \
     FrameworksFog \
     FrameworksFogIN2 \
-    NoCutoutOverlay \
+    NoCutoutOverlayFog \
     SettingsFog \
     SettingsProviderFog \
     SettingsProviderFogCommon \
