@@ -8,6 +8,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_fog.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_fog-user \
-    aosp_fog-userdebug \
-    aosp_fog-eng
+    aosp_fog-ap2a-user \
+    aosp_fog-ap2a-userdebug \
+    aosp_fog-ap2a-eng
