@@ -52,20 +52,12 @@ ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=50
 ro.lmk.stall_limit_critical=40
 ro.lmk.swap_util_max=90
+ro.lmk.thrashing_limit=30
+ro.lmk.thrashing_limit_decay=25
 ro.lmk.thrashing_limit_critical=30
 ro.lmk.psi_complete_stall_ms=120
 ro.lmk.psi_partial_stall_ms=50
 ro.lmk.filecache_min_kb=300000
-ro.lmk.use_psi=true
-ro.lmk.low=1001
-ro.lmk.medium=800
-ro.lmk.critical=0
-ro.lmk.critical_upgrade=false
-ro.lmk.upgrade_pressure=87
-ro.lmk.downgrade_pressure=75
-ro.lmk.thrashing_limit=50
-ro.lmk.thrashing_limit_decay=40
-ro.lmk.swap_free_low_percentage=15
 
 # Media
 debug.stagefright.c2inputsurface=-1
