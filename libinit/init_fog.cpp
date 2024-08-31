@@ -133,7 +133,7 @@ void vendor_load_properties() {
 
     // Set dalvik heap configuration
     std::string heapstartsize, heapgrowthlimit, heapsize, heapminfree,
-			heapmaxfree, heaptargetutilization;
+			heapmaxfree, heaptargetutilization, lowram;
 
     struct sysinfo sys;
     sysinfo(&sys);
@@ -146,6 +146,7 @@ void vendor_load_properties() {
         heaptargetutilization = "0.5";
         heapminfree = "8m";
         heapmaxfree = "32m";
+        lowram = "false";
     } else if (sys.totalram > 3072ull * 1024 * 1024) {
         // from - phone-xhdpi-4096-dalvik-heap.mk
         heapstartsize = "8m";
@@ -154,6 +155,7 @@ void vendor_load_properties() {
         heaptargetutilization = "0.6";
         heapminfree = "8m";
         heapmaxfree = "16m";
+        lowram = "true";
     } else {
         // from - phone-xhdpi-2048-dalvik-heap.mk
         heapstartsize = "8m";
@@ -162,6 +164,7 @@ void vendor_load_properties() {
         heaptargetutilization = "0.75";
         heapminfree = "512k";
         heapmaxfree = "8m";
+        lowram = "true";
     }
 
     property_override("dalvik.vm.heapstartsize", heapstartsize);
@@ -170,4 +173,5 @@ void vendor_load_properties() {
     property_override("dalvik.vm.heaptargetutilization", heaptargetutilization);
     property_override("dalvik.vm.heapminfree", heapminfree);
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
+    property_override("ro.config.low_ram", lowram);
 }
