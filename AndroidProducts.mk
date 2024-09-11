@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_fog.mk
+    $(LOCAL_DIR)/styx_fog.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_fog-ap3a-user \
-    aosp_fog-ap3a-userdebug \
-    aosp_fog-ap3a-eng
+    styx_fog-ap3a-user \
+    styx_fog-ap3a-userdebug \
+    styx_fog-ap3a-eng
