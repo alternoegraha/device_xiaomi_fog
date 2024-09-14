@@ -80,6 +80,9 @@ function blob_fixup() {
         vendor/etc/init/vendor.sensors.sscrpcd.rc)
             sed -i 's|class early_hal|class core|g' "${2}"
             ;;
+        vendor/etc/seccomp_policy/atfwd@2.0.policy)
+            echo 'gettid: 1' >> ${2}
+            ;; 
     esac
 }
 
