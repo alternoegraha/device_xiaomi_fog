@@ -352,7 +352,6 @@ vendor/etc/camera/model/dof_model/capture_model|a2fef853cb34af265c964f48a86ac5d7
 vendor/etc/camera/model/rt_model/preview_cache|154402f358b0b9e7a402fa2718e7b1c651f81ba3
 vendor/etc/camera/model/rt_model/preview_model|70e35049e43b2320fe935c1689382a474082fcfa
 vendor/etc/camera/model/rt_model/preview_policy|8350a33f9edc4724287825f83dcd32651638c8fa
-vendor/etc/camera/camxoverridesettings.txt|57e4f1f9fe1d04dd2010af41f6717cbd827ad551
 vendor/etc/camera/com.xiaomi.dcal.wd.golden|4ebd204d89a58500de1717fae09eb8862fa71be6
 vendor/etc/camera/com.xiaomi.dcal.wd.golden_2|77846a718f9fd924372f83c0d70125211c0a49da
 vendor/etc/camera/dof_mecp.bin|81b1d8e132147d195ab2307360764aea9ad95157
