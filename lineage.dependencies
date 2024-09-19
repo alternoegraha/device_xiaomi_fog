@@ -1,0 +1,19 @@
+[
+    {
+        "remote":       "github",
+        "repository":   "alternoegraha/vendor_xiaomi_fog",
+        "target_path":  "vendor/xiaomi/fog"
+    },
+    {
+        "remote":       "github",
+        "repository":   "alternoegraha/wwy_kernel_xiaomi_fog_rebase",
+        "target_path":  "kernel/xiaomi/fog",
+        "branch":       "another-reset",
+        "clone-depth":  "1"
+    },
+    {
+        "remote":       "github",
+        "repository":   "LineageOS/android_hardware_xiaomi",
+        "target_path":  "hardware/xiaomi"
+    }
+]
