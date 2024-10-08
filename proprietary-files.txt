@@ -269,7 +269,6 @@ vendor/lib64/libopencv.so|3290c7e4b89dbcd895d20b1c56313e5f2ec31d34
 vendor/lib64/libopestriping.so|c095c5ea556d5c2178b42f108ba3a72178e7980d
 vendor/lib64/libsdk_sr.so|4fc511481b08aa3331d3edb2744cade6575a9e80
 vendor/lib64/libswregistrationalgo.so|29444b2e317fc6470f4a09df5505f98af6c44008
-vendor/lib64/libswvdec.so|e50cc714152873d4fdcabd3ed1bbf9e635725b78
 vendor/lib64/libtfestriping.so|63b7e3b6b0078fc1b69be442a5d8ad0a89b21a18
 vendor/lib64/libwa_depth.so|64b313c0f31e71d01d31ed2957ccf7382ea7199b
 vendor/lib64/libwa_dof.so|eb1c6dc20f152ff7d63e86270d9b4bcb973dbd56
