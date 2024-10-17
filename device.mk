@@ -487,7 +487,8 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.basic
+    android.hardware.usb@1.0-service.basic \
+    android.hardware.usb.gadget@1.2-service-qti
 
 PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
