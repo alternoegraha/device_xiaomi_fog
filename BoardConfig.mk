@@ -116,7 +116,8 @@ BOARD_KERNEL_CMDLINE += \
     service_locator.enable=1 \
     swiotlb=2048 \
     kpti=off \
-    cgroup_disable=pressure
+    cgroup_disable=pressure \
+    kasan=off
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := vendor/fog-perf_defconfig
