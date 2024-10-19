@@ -18,3 +18,7 @@ cd kernel/xiaomi/fog
 rm -rf Android.bp
 rm -rf techpack/audio/Android.bp
 cd ../../..
+
+# temp
+rm -rf vendor/aosp/signing/keys
+git clone -b pixel https://github.com/alternoegraha/keys vendor/aosp/signing/keys
