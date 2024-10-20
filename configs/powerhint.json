@@ -105,6 +105,7 @@
       "Path": "/sys/class/kgsl/kgsl-3d0/min_pwrlevel",
       "Values": [
         "0",
+        "1",
         "3",
         "4",
         "5"
@@ -357,12 +358,6 @@
       "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
       "Value": "1344000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "GPUMinFreq",
-      "Duration": 0,
-      "Value": "5"
     },
     {
       "PowerHint": "INTERACTION",
@@ -668,13 +663,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "GPUMaxFreq",
-      "Duration": 0,
-      "Value": "0"
+      "Value": "1"
     }
   ]
 }
