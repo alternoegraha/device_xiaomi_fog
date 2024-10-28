@@ -41,7 +41,7 @@ TARGET_DEFAULT_PIXEL_LAUNCHER := true
 # Blur
 TARGET_ENABLE_BLUR := true
 
-# Camera, set to false to build with aperture camera
+# Camera, set to true to build with aperture camera
 PRODUCT_NO_CAMERA := false
 
 # MiuiCamera
