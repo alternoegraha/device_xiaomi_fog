@@ -17,32 +17,14 @@ TARGET_SUPPORTS_QUICK_TAP := false
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
 
-PRODUCT_NAME := lineage_fog
+PRODUCT_NAME := bliss_fog
 PRODUCT_DEVICE := fog
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 10C
 
-# RisingOS stuff
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RISING_CHIPSET="Snapdragon 680" \
-    RISING_MAINTAINER="rootd"
-
-# GAPPS stuff
-WITH_GMS := true
-
-# Set both to false to get full GAPPS instead of CORE
-TARGET_CORE_GMS := true
-TARGET_CORE_GMS_EXTRAS := true
-
-# Set to false to get Ortus launcher by default
-TARGET_DEFAULT_PIXEL_LAUNCHER := true
-
-# Blur
-TARGET_ENABLE_BLUR := true
-
-# Camera, set to true to build with aperture camera
-PRODUCT_NO_CAMERA := false
+# BlissROMs flags
+TARGET_STOCK_GAPPS := true
 
 # MiuiCamera
 $(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
