@@ -23,6 +23,9 @@ PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 10C
 
+# Private keys
+-include vendor/lineage-priv/keys/keys.mk
+
 # BlissROMs flags
 TARGET_STOCK_GAPPS := true
 
