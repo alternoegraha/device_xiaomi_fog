@@ -16,6 +16,5 @@ git clone -b https://gitea.com/asterixiverz/vendor_xiaomi_fog-miuicamera.git ven
 # LineageOS SEpolicy
 git clone -b lineage-22.0 https://github.com/LineageOS/android_device_lineage_sepolicy device/lineage/sepolicy
 
-# Kernel fixups
-rm kernel/xiaomi/fog/Android.bp
-rm kernel/xiaomi/fog/techpack/audio/Android.bp
+# libfmjni duplicate fixup
+mv vendor/nxp/opensource/libfmjni/Android.mk vendor/nxp/opensource/libfmjni/Android.mk.old
