@@ -115,6 +115,7 @@ BOARD_KERNEL_CMDLINE += \
     msm_rtb.filter=0x237 \
     service_locator.enable=1 \
     swiotlb=2048 \
+    kpti=off \
     cgroup_disable=pressure
 
 TARGET_KERNEL_ARCH := arm64
