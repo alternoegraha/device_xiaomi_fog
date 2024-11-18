@@ -172,7 +172,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
     android.hardware.drm-service.clearkey \
-    libcrypto_shim
+    libcrypto_shim \
+    libcrypto_shim.vendor
 
 PRODUCT_PACKAGES += \
     libcrypto_shim \
