@@ -30,7 +30,7 @@ PRODUCT_MODEL := Redmi 10C
 TARGET_STOCK_GAPPS := true
 
 # MiuiCamera
-$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+$(call inherit-product, vendor/xiaomi/miuicamera/config.mk)
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
