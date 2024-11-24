@@ -238,9 +238,6 @@ ro.opengles.version=196610
 vendor.gralloc.disable_ubwc=0
 vendor.gralloc.secure_preview_buffer_format=420_sp
 
-# Netflix Properties
-vendor.netflix.bsp_rev=Q6115-31409-1
-
 # NFC
 ro.hardware.nfc_nci=pn8x
 ro.vendor.se.type=HCE,UICC
