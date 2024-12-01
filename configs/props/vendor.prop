@@ -195,9 +195,6 @@ drm.service.enabled=true
 # DPM
 persist.vendor.dpmhalservice.enable=1
 
-# FRP
-ro.frp.pst=/dev/block/bootdevice/by-name/frp
-
 # Graphics
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
