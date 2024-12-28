@@ -177,8 +177,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libcrypto_shim \
-    libcrypto_shim.vendor
-    
+    libcrypto_shim.vendor \
+    libcrypto-v33
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
