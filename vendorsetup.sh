@@ -16,5 +16,8 @@ git clone -b lineage-22.0 https://github.com/LineageOS/android_hardware_xiaomi h
 # LineageOS SEpolicy
 git clone -b lineage-22.0 https://github.com/LineageOS/android_device_lineage_sepolicy device/lineage/sepolicy --depth 1
 
+# MIUI camera
+git clone -b leica-5.0 https://gitlab.com/r0ddty/vendor_xiaomi_miuicamera_fog vendor/xiaomi/miuicamera --depth 1
+
 # libfmjni duplicate fixup
 mv vendor/nxp/opensource/libfmjni/Android.mk vendor/nxp/opensource/libfmjni/Android.mk.old
