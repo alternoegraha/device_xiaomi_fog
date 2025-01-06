@@ -21,7 +21,6 @@ persist.cne.feature=1
 # Display
 debug.sf.enable_hwc_vds=0
 debug.sf.auto_latch_unsignaled=0
-ro.surface_flinger.supports_background_blur=0
 
 # DPM
 persist.dpm.feature=1
