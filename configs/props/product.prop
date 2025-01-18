@@ -32,12 +32,12 @@ bluetooth.profile.pbap.server.enabled?=true
 bluetooth.profile.sap.server.enabled?=true
 bluetooth.profile.vcp.controller.enabled?=true
 
-# LMK
-ro.lmk.kill_timeout_ms=50
-ro.lmk.log_stats=true
+# Low memory killer daemon
 ro.lmk.kill_heaviest_task=true
-ro.lmk.use_minfree_levels=true
-ro.lmk.stall_limit_critical=40
+ro.lmk.thrashing_limit=50
+ro.lmk.thrashing_limit_decay=25
+ro.lmk.psi_complete_stall_ms=80
+ro.lmk.psi_partial_stall_ms=50
 
 # Phantom process monitoring
 sys.fflag.override.settings_enable_monitor_phantom_procs=false
