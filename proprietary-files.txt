@@ -580,7 +580,6 @@ vendor/bin/hw/vendor.silead.hardware.fingerprintext@1.0-service
 vendor/etc/init/vendor.silead.hardware.fingerprintext@1.0-service.rc
 vendor/lib64/hw/fingerprint.fpc.default.so:vendor/lib64/hw/fingerprint.fpc.bengal.so
 vendor/lib64/hw/fingerprint.silead.default.so:vendor/lib64/hw/fingerprint.silead.bengal.so
-vendor/lib64/com.fingerprints.extension@1.0.so
 vendor/lib64/libsl_fp_impl.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/vendor.silead.hardware.fingerprintext@1.0.so
