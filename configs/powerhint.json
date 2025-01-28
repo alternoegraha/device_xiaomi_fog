@@ -210,6 +210,56 @@
       "ResetOnInit": true
     },
     {
+      "Name": "BGUClampMaxBoost",
+      "Path": "/dev/cpuctl/background/cpu.uclamp.max",
+      "Values": [
+        "10.00",
+        "51.20"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "Dex2oatUClampMaxBoost",
+      "Path": "/dev/cpuctl/dex2oat/cpu.uclamp.max",
+      "Values": [
+        "40.00",
+        "60.50"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CAMUClampBoost",
+      "Path": "/dev/cpuctl/camera-daemon/cpu.uclamp.min",
+      "Values": [
+        "76.50",
+        "25.00",
+        "0.00"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TAUClampBoost",
+      "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
+      "Values": [
+        "76.50",
+        "40.90",
+        "1.00"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "FGUClampBoost",
+      "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
+      "Values": [
+        "15.90",
+        "61.50",
+        "0.00"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "DDRLittleClusterMinFreq",
       "Path": "/sys/class/devfreq/soc:qcom,cpu0-cpu-ddr-lat/min_freq",
       "Values": [
@@ -242,15 +292,6 @@
       ],
       "DefaultIndex": 1,
       "HoldFd": true
-    },
-    {
-      "Name": "EnergyAware",
-      "Path": "/proc/sys/kernel/sched_energy_aware",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "ResetOnInit": true
     },
     {
       "Name": "PowerHALMainState",
@@ -348,12 +389,6 @@
       "Value": "7759"
     },
     {
-      "PowerHint": "LAUNCH",
-      "Node": "EnergyAware",
-      "Duration": 2000,
-      "Value": "0"
-    },
-    {
       "PowerHint": "INTERACTIVE",
       "Node": "CPULittleClusterUpRateLimit",
       "Duration": 0,
@@ -388,6 +423,30 @@
       "Node": "CPUBigClusterMinFreq",
       "Duration": 2000,
       "Value": "2400000"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "BGUClampMaxBoost",
+      "Duration": 3000,
+      "Value": "51.20"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "Dex2oatUClampMaxBoost",
+      "Duration": 3000,
+      "Value": "60.50"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "TAUClampBoost",
+      "Duration": 3000,
+      "Value": "40.90"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "FGUClampBoost",
+      "Duration": 3000,
+      "Value": "61.50"
     },
     {
       "PowerHint": "LAUNCH",
@@ -448,12 +507,6 @@
       "Node": "DDRBigClusterMinFreq",
       "Duration": 2000,
       "Value": "15960"
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "EnergyAware",
-      "Duration": 1000,
-      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
@@ -574,12 +627,6 @@
       "Node": "CPUBWIOPercent",
       "Duration": 0,
       "Value": "80"
-    },
-    {
-      "PowerHint": "CAMERA_SHOT",
-      "Node": "EnergyAware",
-      "Duration": 1000,
-      "Value": "0"
     },
     {
       "PowerHint": "CAMERA_SHOT",
