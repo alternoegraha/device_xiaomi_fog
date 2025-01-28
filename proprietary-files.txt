@@ -1370,6 +1370,14 @@ vendor/firmware/novatek_ts_hlt_fw.bin|8006bf944e643d7caa5bbd9566291f39c62dd328
 vendor/firmware/novatek_ts_hlt_mp.bin|f8a4ed3ec201fb2639fc4ae15a7f8e08bbe540ab
 vendor/firmware/novatek_ts_mp.bin|d7638261766d06f597cef04e2e36c18bbd81eea6
 
+# Touch Firmware (Recovery)
+vendor/firmware/Conf_MultipleTest.ini:recovery/root/vendor/firmware/Conf_MultipleTest.ini
+vendor/firmware/focaltech_ts_fw_xinli.bin:recovery/root/vendor/firmware/focaltech_ts_fw_xinli.bin
+vendor/firmware/novatek_ts_fw.bin:recovery/root/vendor/firmware/novatek_ts_fw.bin
+vendor/firmware/novatek_ts_hlt_fw.bin:recovery/root/vendor/firmware/novatek_ts_hlt_fw.bin
+vendor/firmware/novatek_ts_hlt_mp.bin:recovery/root/vendor/firmware/novatek_ts_hlt_mp.bin
+vendor/firmware/novatek_ts_mp.bin:recovery/root/vendor/firmware/novatek_ts_mp.bin
+
 # Trusted Execution Environment connector
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
