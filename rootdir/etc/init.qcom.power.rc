@@ -64,6 +64,29 @@ on property:sys.boot_completed=1
     # Enable powersaving
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
+    # Setup final cpu.uclamp.min
+    write /dev/cpuctl/top-app/cpu.uclamp.min 0.00
+    write /dev/cpuctl/foreground/cpu.uclamp.min 0.00
+    write /dev/cpuctl/system/cpu.uclamp.min 0.00
+
+    # Set uclamp.max for some groups, which could indicate cpu importance used in scheduling
+    write /dev/cpuctl/background/cpu.uclamp.max 51.20
+    write /dev/cpuctl/system-background/cpu.uclamp.max 51.20
+    write /dev/cpuctl/dex2oat/cpu.uclamp.max 61.50
+
+    # Setup cpu.shares to throttle background groups (bg ~ 5% sysbg ~ 5% dex2oat ~2.5%)
+    write /dev/cpuctl/background/cpu.shares 1024
+    write /dev/cpuctl/system-background/cpu.shares 1024
+    write /dev/cpuctl/dex2oat/cpu.shares 512
+    write /dev/cpuctl/system/cpu.shares 20480
+
+    # We only have system and background groups holding tasks and the groups below are empty
+    write /dev/cpuctl/camera-daemon/cpu.shares 20480
+    write /dev/cpuctl/foreground/cpu.shares 20480
+    write /dev/cpuctl/nnapi-hal/cpu.shares 20480
+    write /dev/cpuctl/rt/cpu.shares 20480
+    write /dev/cpuctl/top-app/cpu.shares 20480
+
 on early-init
     # configure governor settings
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
@@ -95,6 +118,15 @@ on init
     write /sys/block/sda/queue/scheduler cfq
     write /sys/block/sda/queue/iosched/slice_idle 0
     write /sys/block/sda/queue/nr_requests 256
+
+    # Boot time uclamp tuning
+    write /dev/cpuctl/top-app/cpu.uclamp.min 15.90
+    write /dev/cpuctl/foreground/cpu.uclamp.min 15.90
+    write /dev/cpuctl/system/cpu.uclamp.min 15.90
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp_min 51.20
+
+    # RT uclamp setting
+    write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
 
     # Disable UFS powersaving
     write /sys/devices/platform/soc/${ro.boot.bootdevice}/clkgate_enable 0
