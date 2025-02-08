@@ -131,12 +131,12 @@ debug.sf.enable_egl_image_tracker=0
 debug.sf.enable_gl_backpressure=false
 debug.sf.enable_transaction_tracing=false
 debug.sf.use_phase_offsets_as_durations=1
-debug.sf.late.sf.duration=10500000
-debug.sf.late.app.duration=20500000
-debug.sf.early.sf.duration=16000000
-debug.sf.early.app.duration=16500000
-debug.sf.earlyGl.sf.duration=13500000
-debug.sf.earlyGl.app.duration=21000000
+debug.sf.late.sf.duration=16800000
+debug.sf.late.app.duration=16800000
+debug.sf.early.sf.duration=13100000
+debug.sf.early.app.duration=14600000
+debug.sf.earlyGl.sf.duration=13100000
+debug.sf.earlyGl.app.duration=14600000
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
 persist.sys.sf.color_mode=0
@@ -238,20 +238,6 @@ persist.vendor.sensors.support_direct_channel=false
 
 # Thermal
 vendor.sys.thermal.data.path=/data/vendor/thermal/
-
-# Touch Hax 
-touch.size.scale=1
-touch.size.bias=0
-touch.size.isSummed=0
-touch.pressure.scale=0.001
-touch.distance.calibration=none
-touch.distance.scale=0
-touch.coverage.calibration=box
-touch.gestureMode=spots
-MultitouchSettleInterval=1ms
-MultitouchMinDistance=1px
-TapInterval=1ms
-TapSlop=1px
 
 # USB
 vendor.usb.diag.func.name=diag
