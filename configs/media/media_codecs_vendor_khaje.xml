@@ -259,6 +259,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="performance-point-1920x1080" value="30" />
         </MediaCodec>
         <MediaCodec name="c2.android.hevc.decoder" type="video/hevc" update="true">
+            <Alias name="OMX.google.hevc.decoder" />
             <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->
             <Limit name="size" min="2x2" max="1280x720" />
             <Limit name="alignment" value="2x2" />
@@ -268,6 +269,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="bitrate" range="1-3000000" />
        </MediaCodec>
        <MediaCodec name="c2.android.avc.decoder" type="video/avc" update="true">
+            <Alias name="OMX.google.h264.decoder" />
             <!-- profiles and levels:  ProfileHigh : Level51 -->
             <Limit name="size" min="2x2" max="1280x720" />
             <Limit name="alignment" value="2x2" />
