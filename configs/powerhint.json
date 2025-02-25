@@ -157,6 +157,8 @@
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_trigger_count",
       "Values": [
         "0",
+        "1",
+        "2",
         "3"
       ],
       "ResetOnInit": true
@@ -166,6 +168,8 @@
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hist_memory",
       "Values": [
         "0",
+        "5",
+        "10",
         "20"
       ],
       "ResetOnInit": true
@@ -175,6 +179,7 @@
       "Path": "/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/hyst_length",
       "Values": [
         "0",
+        "5",
         "10"
       ],
       "ResetOnInit": true
@@ -355,19 +360,19 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUBWHystTriggerCount",
       "Duration": 200,
-      "Value": "0"
+      "Value": "2"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBWHystLength",
       "Duration": 200,
-      "Value": "0"
+      "Value": "5"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBWHistMemory",
       "Duration": 200,
-      "Value": "0"
+      "Value": "10"
     },
     {
       "PowerHint": "INTERACTION",
@@ -439,7 +444,7 @@
       "PowerHint": "LAUNCH",
       "Node": "CPUBWHystTriggerCount",
       "Duration": 3000,
-      "Value": "0"
+      "Value": "1"
     },
     {
       "PowerHint": "LAUNCH",
@@ -451,7 +456,7 @@
       "PowerHint": "LAUNCH",
       "Node": "CPUBWHistMemory",
       "Duration": 3000,
-      "Value": "0"
+      "Value": "5"
     },
     {
       "PowerHint": "LAUNCH",
@@ -635,4 +640,3 @@
     }
   ]
 }
-
