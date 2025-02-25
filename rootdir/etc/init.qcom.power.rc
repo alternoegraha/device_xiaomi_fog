@@ -32,38 +32,31 @@ on enable-low-power
 on property:sys.boot_completed=1
     trigger enable-low-power
 
-    # Runtime fs tuning
-    write /sys/block/sda/queue/nr_requests 128
-    write /sys/block/sda/queue/iostats 1
+    # Back to default VM settings
+    write /proc/sys/vm/dirty_expire_centisecs 3000
+    write /proc/sys/vm/dirty_background_ratio 10
 
     # Block layer tuning: discard chunk size up to 128MB
     # Otherwise, contiguous discards can be merged
     write /sys/block/sda/queue/discard_max_bytes 134217728
 
-    # Back to default VM settings
-    write /proc/sys/vm/dirty_expire_centisecs 3000
-    write /proc/sys/vm/dirty_background_ratio 10
+    # Configure latfloor
+    write /sys/devices/platform/soc/soc:qcom,cpu0-cpu-ddr-latfloor/devfreq/soc:qcom,cpu0-cpu-ddr-latfloor/governor "compute"
+    write /sys/devices/platform/soc/soc:qcom,cpu0-cpu-ddr-latfloor/devfreq/soc:qcom,cpu0-cpu-ddr-latfloor/polling_interval 10
+    
+    write /sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-latfloor/devfreq/soc:qcom,cpu4-cpu-ddr-latfloor/governor "compute"
+    write /sys/devices/platform/soc/soc:qcom,cpu4-cpu-ddr-latfloor/devfreq/soc:qcom,cpu4-cpu-ddr-latfloor/polling_interval 10
 
-    # Setup runtime cpusets
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-2,5-7
-    write /dev/cpuset/background/cpus 2-3
-    write /dev/cpuset/system-background/cpus 0-3
-    write /dev/cpuset/restricted/cpus 0-3
-
-    # Setup runtime blkio
-    # value for group_idle is us
-    write /dev/blkio/blkio.weight 1000
-    write /dev/blkio/background/blkio.weight 200
-    write /dev/blkio/blkio.group_idle 2000
-    write /dev/blkio/background/blkio.group_idle 0
-
-    # Enable UFS powersaving
-    write /sys/devices/platform/soc/4804000.ufshc/clkgate_enable 1
+    # Configure schedutil rate limits times
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 500
 
     # Enable powersaving
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
+    # Enable UFS powersaving
+    write /sys/devices/platform/soc/4804000.ufshc/clkgate_enable 1
+    
     # Setup final cpu.uclamp.min
     write /dev/cpuctl/top-app/cpu.uclamp.min 0.00
     write /dev/cpuctl/foreground/cpu.uclamp.min 0.00
@@ -79,7 +72,6 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/system-background/cpu.shares 1024
     write /dev/cpuctl/dex2oat/cpu.shares 512
     write /dev/cpuctl/system/cpu.shares 20480
-
     # We only have system and background groups holding tasks and the groups below are empty
     write /dev/cpuctl/camera-daemon/cpu.shares 20480
     write /dev/cpuctl/foreground/cpu.shares 20480
@@ -87,17 +79,25 @@ on property:sys.boot_completed=1
     write /dev/cpuctl/rt/cpu.shares 20480
     write /dev/cpuctl/top-app/cpu.shares 20480
 
+    # Runtime fs tuning
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/sda/queue/iostats 1
+
+    # Setup runtime blkio
+    # value for group_idle is us
+    write /dev/blkio/blkio.weight 1000
+    write /dev/blkio/background/blkio.weight 200
+    write /dev/blkio/blkio.group_idle 2000
+    write /dev/blkio/background/blkio.group_idle 0
+
+    # Setup runtime cpusets
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-2,5-7
+    write /dev/cpuset/background/cpus 2-3
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/restricted/cpus 0-3
+
 on early-init
-    # configure governor settings
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 20000
-
-    # configure governor settings for big cluster
-    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor schedutil
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 20000
-
     # Disable UFS clock scaling
     write /sys/bus/platform/devices/4804000.ufshc/clkscale_enable 0
 
@@ -105,13 +105,6 @@ on init
     # Setup permission for Power HAL
     chown system system /dev/cpu_dma_latency
     chmod 0664 /dev/cpu_dma_latency
-
-    # Boot time cpuset
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 0-5
-    write /dev/cpuset/system-background/cpus 0-5
-    write /dev/cpuset/restricted/cpus 2-5
 
     # Boot time fs tuning
     write /sys/block/sda/queue/iostats 0
@@ -134,7 +127,7 @@ on init
     # Disable powersaving
     write /sys/module/lpm_levels/parameters/sleep_disabled 1
 
-    # bring back all cores
+    # Bring back all cores
     write /sys/devices/system/cpu/cpu0/online 1
     write /sys/devices/system/cpu/cpu1/online 1
     write /sys/devices/system/cpu/cpu2/online 1
@@ -151,6 +144,8 @@ on init
     chown system system /dev/cpuset/camera-daemon-dedicated/tasks
     chmod 0664 /dev/cpuset/camera-daemon-dedicated/tasks
 
-    # report max frequency to unity tasks.
-    write /proc/sys/kernel/sched_lib_name "com.miHoYo., com.activision., com.epicgames, com.dts., UnityMain, libunity.so, libil2cpp.so, libmain.so, libcri_vip_unity.so, libopus.so, libxlua.so, libUE4.so, libAsphalt9.so, libnative-lib.so, libRiotGamesApi.so, libResources.so, libagame.so, libapp.so, libflutter.so, libMSDKCore.so, libFIFAMobileNeon.so, libUnreal.so, libEOSSDK.so, libcocos2dcpp.so, libfb.so"
-    write /proc/sys/kernel/sched_lib_mask_force 255
+    # Fix ECC Crash
+    write /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled N
+    write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/idle_enabled N
+    write /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/suspend_enabled N
+    write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/suspend_enabled N
