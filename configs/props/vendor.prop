@@ -206,6 +206,7 @@ ro.opengles.version=196610
 
 # Media
 vendor.media.target.version=3
+vendor.sys.media.target.version=3
 
 # NFC
 ro.hardware.nfc_nci=pn8x
