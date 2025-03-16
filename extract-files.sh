@@ -63,14 +63,6 @@ function blob_fixup() {
         vendor/lib64/camera/components/com.qti.node.mialgocontrol.so)
             "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
-        vendor/lib64/vendor.silead.hardware.fingerprintext@1.0.so)
-            "${PATCHELF}" --remove-needed "libhidlbase.so" "${2}"
-            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
-            ;;
-        vendor/lib64/com.fingerprints.extension@1.0.so)
-            "${PATCHELF}" --remove-needed "libhidlbase.so" "${2}"
-            sed -i "s/libhidltransport.so/libhidlbase-v32.so\x00/" "${2}"
-            ;;
         vendor/etc/init/vendor.sensors.sscrpcd.rc)
             sed -i 's|class early_hal|class core|g' "${2}"
             ;;
