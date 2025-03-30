@@ -58,6 +58,7 @@ persist.log.tag.TrafficStats=S
 persist.log.tag.ContrastColorUtil=S
 persist.log.tag.GRALLOC=S
 persist.log.tag.gralloc4=S
+persist.log.tag.HWUI=S
 
 # Media
 debug.stagefright.ccodec=1
