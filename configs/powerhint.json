@@ -8,7 +8,7 @@
         "1516800",
         "1190400"
       ],
-      "DefaultIndex": 0,
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -53,7 +53,7 @@
         "1766400",
         "1344000"
       ],
-      "DefaultIndex": 0,
+      "DefaultIndex": 1,
       "ResetOnInit": true
     },
     {
@@ -406,9 +406,27 @@
     },    
     {
       "PowerHint": "LAUNCH",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 3000,
+      "Value": "2400000"
+    },
+    {
+      "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 3000,
       "Value": "2400000"
+    },
+    {
+     "PowerHint": "LAUNCH",
+     "Node": "CPULittleClusterMaxFreq",
+     "Duration": 3000,
+     "Value": "1900800"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 3000,
+      "Value": "1900800"
     },
     {
       "PowerHint": "LAUNCH",
@@ -433,12 +451,6 @@
       "Node": "FGUClampBoost",
       "Duration": 3000,
       "Value": "15.90"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CPULittleClusterMinFreq",
-      "Duration": 3000,
-      "Value": "1900800"
     },
     {
       "PowerHint": "LAUNCH",
