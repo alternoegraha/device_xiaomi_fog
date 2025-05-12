@@ -37,6 +37,7 @@ bluetooth.profile.vcp.controller.enabled?=true
 ro.lmk.filecache_min_kb=300000
 ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=100
+ro.lmk.log_stats=false
 ro.lmk.psi_complete_stall_ms=50
 ro.lmk.psi_partial_stall_ms=50
 ro.lmk.swap_util_max=90
