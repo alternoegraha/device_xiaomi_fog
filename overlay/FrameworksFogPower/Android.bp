@@ -1,6 +1,5 @@
 runtime_resource_overlay {
-    name: "SettingsProviderFogIN",
-    theme: "SettingsProviderFogIN",
+    name: "FrameworksFogPower",
     sdk_version: "current",
     vendor: true,
 }

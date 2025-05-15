@@ -345,15 +345,19 @@ PRODUCT_PACKAGES += \
     CarrierConfigFog \
     DialerFog \
     FrameworksFog \
-    FrameworksFogIN2 \
+    FrameworksFogCommon \
+    FrameworksFogIndia \
+    FrameworksFogPower \
+    FrameworksRain \
+    FrameworksWind \
     LineageSDKFog \
     NoCutoutOverlay \
     NotchBarKiller \
     SettingsFog \
     SettingsProviderFog \
     SettingsProviderFogCommon \
-    SettingsProviderFogIN \
-    SettingsProviderFogIN2 \
+    SettingsProviderFogIndia \
+    SettingsProviderFogPower \
     SettingsProviderRain \
     SettingsProviderWind \
     SystemUIFog \

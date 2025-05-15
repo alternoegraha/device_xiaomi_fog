@@ -4,14 +4,13 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.settingsprovider.overlay.fog">
+    package="com.android.overlay.fog_power">
 
     <application android:hasCode="false" />
-
     <overlay
         android:isStatic="true"
         android:priority="1"
         android:requiredSystemPropertyName="ro.boot.product.hardware.sku"
-        android:requiredSystemPropertyValue="c3qa"
-        android:targetPackage="com.android.providers.settings" />
+        android:requiredSystemPropertyValue="c3qc"
+        android:targetPackage="android" />
 </manifest>

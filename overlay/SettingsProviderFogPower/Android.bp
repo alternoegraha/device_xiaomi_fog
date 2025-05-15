@@ -1,0 +1,6 @@
+runtime_resource_overlay {
+    name: "SettingsProviderFogPower",
+    theme: "SettingsProviderFogPower",
+    sdk_version: "current",
+    vendor: true,
+}

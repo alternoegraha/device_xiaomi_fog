@@ -2,5 +2,22 @@ runtime_resource_overlay {
     name: "SettingsProviderFog",
     theme: "SettingsProviderFog",
     sdk_version: "current",
+    manifest: "AndroidManifest.xml",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "SettingsProviderRain",
+    theme: "SettingsProviderRain",
+    sdk_version: "current",
+    manifest: "AndroidManifestC3QN.xml",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "SettingsProviderWind",
+    theme: "SettingsProviderWind",
+    sdk_version: "current",
+    manifest: "AndroidManifestC3QL.xml",
     vendor: true,
 }

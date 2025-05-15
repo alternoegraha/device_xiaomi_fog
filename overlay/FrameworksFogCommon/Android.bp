@@ -1,6 +1,6 @@
 runtime_resource_overlay {
-    name: "SettingsProviderRain",
-    theme: "SettingsProviderRain",
+    name: "FrameworksFogCommon",
+    theme: "FrameworksFogCommon",
     sdk_version: "current",
     vendor: true,
 }
