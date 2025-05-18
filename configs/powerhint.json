@@ -250,6 +250,7 @@
       "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
       "Values": [
         "76.50",
+        "49.10",
         "1.00"
       ],
       "ResetOnInit": true
@@ -444,7 +445,7 @@
       "PowerHint": "LAUNCH",
       "Node": "TAUClampBoost",
       "Duration": 3000,
-      "Value": "76.50"
+      "Value": "49.10"
     },
     {
       "PowerHint": "LAUNCH",
