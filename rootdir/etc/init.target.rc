@@ -138,6 +138,9 @@ on boot
     chown system system /proc/tp_gesture
     chmod 0664 /proc/tp_gesture
 
+    # Thermal
+    start mi_thermald
+
     # USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
