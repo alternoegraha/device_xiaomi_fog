@@ -262,6 +262,29 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
 
+# Logging
+SPAMMY_LOG_TAGS := \
+    AnalyticsService \
+    KernelCpuUidActiveTimeReader \
+    Tracer \
+    NearbySharing \
+    IntervalStats \
+    CompatibilityChangeReporter \
+    SQLiteLog \
+    wificond \
+    b/223498680 \
+    TrafficStats \
+    ContrastColorUtil \
+    GRALLOC \
+    gralloc4 \
+    HWUI \
+    WifiHAL
+
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_SYSTEM_PROPERTIES += \
+    $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=S)
+endif
+
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-service \
