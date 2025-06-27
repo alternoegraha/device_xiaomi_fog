@@ -8,7 +8,6 @@ dontaudit hal_bootctl_default gsi_metadata_file:dir search;
 dontaudit { gmscore_app hal_camera_default flags_health_check } property_type:file r_file_perms;
 dontaudit {
   rild
-  vendor_hal_neuralnetworks_default
   vendor_qti_init_shell
 } default_prop:file r_file_perms;
 

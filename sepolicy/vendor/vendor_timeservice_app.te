@@ -1,1 +1,0 @@
-allow vendor_timeservice_app zygote:unix_stream_socket { getopt };

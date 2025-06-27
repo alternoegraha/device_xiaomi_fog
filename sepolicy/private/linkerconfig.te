@@ -1,1 +1,0 @@
-allow linkerconfig linkerconfig:capability { sys_admin kill };

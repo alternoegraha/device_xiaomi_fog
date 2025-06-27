@@ -12,12 +12,6 @@
 # Charger
 /vendor/bin/batterysecret                                               u:object_r:batterysecret_exec:s0
 
-# Data files
-/data/per_boot(/.*)?                                                    u:object_r:per_boot_file:s0
-
-# Device nodes
-/dev/stune(/.*)?	                                                u:object_r:cgroup:s0
-
 # Display
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/disp_param        u:object_r:vendor_sysfs_graphics:s0
 /sys/devices/platform/soc/[a-z0-9]+.qcom,mdss_mdp/drm/card([0-3])+/card([0-3])+-DSI-1/panel_info        u:object_r:vendor_sysfs_graphics:s0
@@ -49,31 +43,21 @@
 # (e.g. Google Camera App)
 /mnt/vendor/dsp/fastrpc_shell_3                                         u:object_r:public_adsprpcd_file:s0
 
-# Health
-/sys/devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify(/.*)?                                                                      u:object_r:vendor_sysfs_battery_supply:s0
-
 # LED
 /sys/devices/platform/soc/[a-z0-9]+.qcom,spmi/spmi-[0-1]/spmi0-0[0-9]/[a-z0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,leds@d000/leds(/.*)?            u:object_r:sysfs_leds:s0
 /sys/devices/platform/soc/[a-z0-9]+.i2c/i2c-[0-9]/[0-9]-[0-9]+/leds(/.*)?                                                                           u:object_r:sysfs_leds:s0
-
-# Label read_ahead_kb in /data partition
-/sys/devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/read_ahead_kb                                                     u:object_r:vendor_sysfs_scsi_host:s0
-
-# Label discard_max_bytes in /data partition
-/sys/devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes                                                 u:object_r:vendor_sysfs_scsi_host:s0
 
 # Lights
 /vendor/bin/hw/android\.hardware\.light-service\.xiaomi                 u:object_r:hal_light_default_exec:s0
 
 # NFC
-/vendor/bin/STFlashTool                                                 u:object_r:stflashtool_exec:s0
-/vendor/bin/hw/android\.hardware\.nfc@1\.2-service\.st                  u:object_r:hal_nfc_default_exec:s0
 /vendor/bin/hw/android\.hardware\.nfc@1\.2-service                      u:object_r:hal_nfc_default_exec:s0
-/dev/st21nfc                                                            u:object_r:nfc_device:s0
 /dev/pn553                                                              u:object_r:nfc_device:s0
 
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                        u:object_r:persist_subsys_file:s0
+/sys/bus/msm_subsys/devices/subsys[0-9]+/name                           u:object_r:vendor_sysfs_ssr:s0
+/sys/bus/msm_subsys/devices/subsys[0-9]+/restart_level                  u:object_r:vendor_sysfs_ssr_toggle:s0
 
 # Power
 /vendor/bin/hw/android\.hardware\.power-service\.xiaomi-libperfmgr      u:object_r:hal_power_default_exec:s0
