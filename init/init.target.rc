@@ -237,8 +237,6 @@ on post-fs-data
     chown nfc nfc /dev/pn553
 
 on property:sys.boot_completed=1
-    # Stop statsd
-    stop statsd
     # Read only one page at a time
     write /proc/sys/vm/page-cluster 0
     # Mount swap partitions specified in fstab
