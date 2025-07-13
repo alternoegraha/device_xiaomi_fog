@@ -527,9 +527,6 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
-# UFFD GC
-OVERRIDE_ENABLE_UFFD_GC := false
-
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
