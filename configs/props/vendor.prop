@@ -126,7 +126,7 @@ dalvik.vm.image-dex2oat-cpu-set=4,5,6,7
 dalvik.vm.image-dex2oat-threads=4
 
 # Display
-debug.sf.disable_client_composition_cache=1
+debug.sf.disable_client_composition_cache=0
 debug.sf.enable_egl_image_tracker=0
 debug.sf.enable_gl_backpressure=false
 debug.sf.enable_transaction_tracing=false
