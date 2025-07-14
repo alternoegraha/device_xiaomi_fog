@@ -1,0 +1,12 @@
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<config>
+    <overlay package="com.android.overlay.fog_common" mutable="false" enabled="true" />
+    <overlay package="com.android.networkstack.tethering.overlay.ncm" mutable="false" enabled="true" />
+    <overlay package="com.android.settings.overlay.fog" mutable="false" enabled="true" />
+    <overlay package="com.android.providers.settings.overlay.fog_common" mutable="false" enabled="true" />
+    <overlay package="com.android.systemui.overlay.fog" mutable="false" enabled="true" />
+    <overlay package="com.android.wifi.resources.overlay.fog_common" mutable="false" enabled="true" />
+</config>

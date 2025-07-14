@@ -1,0 +1,15 @@
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<config>
+    <overlay package="com.android.overlay.fog" mutable="false" enabled="true" />
+    <overlay package="com.android.overlay.fog_in" mutable="false" enabled="true" />
+    <overlay package="com.android.overlay.fog_power" mutable="false" enabled="true" />
+    <overlay package="com.android.providers.settings.overlay.fog" mutable="false" enabled="true" />
+    <overlay package="com.android.providers.settings.overlay.fog_in" mutable="false" enabled="true" />
+    <overlay package="com.android.providers.settings.overlay.fog_power" mutable="false" enabled="true" />
+    <overlay package="com.android.wifi.resources.overlay.fog" mutable="false" enabled="true" />
+    <overlay package="com.android.wifi.resources.overlay.fog_in" mutable="false" enabled="true" />
+    <overlay package="com.android.wifi.resources.overlay.fog_power" mutable="false" enabled="true" />
+</config>
