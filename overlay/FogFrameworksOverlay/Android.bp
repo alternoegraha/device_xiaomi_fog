@@ -1,0 +1,11 @@
+runtime_resource_overlay {
+    name: "FogFrameworksOverlay",
+    manifest: "AndroidManifest.xml",
+    device_specific: true,
+}
+
+runtime_resource_overlay {
+    name: "FogFrameworksOverlayIN",
+    manifest: "AndroidManifestC3QB.xml",
+    device_specific: true,
+}

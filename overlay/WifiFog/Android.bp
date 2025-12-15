@@ -1,5 +1,0 @@
-runtime_resource_overlay {
-    name: "WifiFog",
-    theme: "WifiFog",
-    vendor: true
-}

@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "FogSettingsProviderOverlayIN2",
+    device_specific: true,
+}

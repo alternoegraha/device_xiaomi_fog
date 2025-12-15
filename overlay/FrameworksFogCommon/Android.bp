@@ -1,5 +1,0 @@
-runtime_resource_overlay {
-    name: "FrameworksFogCommon",
-    theme: "FrameworksFogCommon",
-    vendor: true,
-}
