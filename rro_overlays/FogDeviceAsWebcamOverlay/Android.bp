@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "FogDeviceAsWebcamOverlay",
+    product_specific: true,
+}

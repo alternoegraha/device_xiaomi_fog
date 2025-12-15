@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "FogWifiOverlay",
+    device_specific: true
+}

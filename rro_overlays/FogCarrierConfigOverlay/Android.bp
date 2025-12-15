@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "FogCarrierConfigOverlay",
+    product_specific: true,
+}

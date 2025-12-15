@@ -364,28 +364,33 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    CarrierConfigFog \
-    DialerFog \
-    DeviceAsWebcamFog \
-    FrameworksFog \
-    FrameworksFogCommon \
-    FrameworksFogIndia \
-    FrameworksFogPower \
-    FrameworksRain \
-    FrameworksWind \
-    LineageSDKFog \
+    FogCarrierConfigOverlay \
+    FogDialerOverlay \
+    FogDeviceAsWebcamOverlay \
+    FogLineageSDKOverlay \
+    FogSettingsOverlay \
+    FogSystemUIOverlay \
+    FogTelephonyOverlay
+
+PRODUCT_PACKAGES += \
+    FogFrameworksOverlayCommon \
+    FogSettingsProviderOverlayCommon \
+    FogWifiOverlayCommon
+
+PRODUCT_PACKAGES += \
+    FogFrameworksOverlay \
+    FogFrameworksOverlayIN \
+    FogFrameworksOverlayIN2 \
+    FogSettingsProviderOverlay \
+    FogSettingsProviderOverlayIN \
+    FogSettingsProviderOverlayIN2 \
+    FogWifiOverlay \
+    FogWifiOverlayIN \
+    FogWifiOverlayIN2
+
+PRODUCT_PACKAGES += \
     NcmTetheringOverlay \
-    NoCutoutOverlay \
-    SettingsFog \
-    SettingsProviderFog \
-    SettingsProviderFogCommon \
-    SettingsProviderFogIndia \
-    SettingsProviderFogPower \
-    SettingsProviderRain \
-    SettingsProviderWind \
-    SystemUIFog \
-    TelephonyFog \
-    WifiFog
+    NoCutoutOverlay
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true

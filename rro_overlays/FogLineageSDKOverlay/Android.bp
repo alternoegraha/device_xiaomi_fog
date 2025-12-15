@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "FogLineageSDKOverlay",
+    product_specific: true,
+}
