@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Integer indicating maximum hardware supported client number of soft ap -->
+    <integer name="config_wifiHardwareSoftapMaxClientCount">32</integer>
+</resources>

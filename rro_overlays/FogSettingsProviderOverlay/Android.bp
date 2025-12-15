@@ -1,0 +1,23 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "FogSettingsProviderOverlay",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WindSettingsProviderOverlay",
+    manifest: "AndroidManifestC3QL.xml",
+    resource_dirs: ["res"],
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "RainSettingsProviderOverlay",
+    manifest: "AndroidManifestC3QN.xml",
+    resource_dirs: ["res"],
+    vendor: true,
+}

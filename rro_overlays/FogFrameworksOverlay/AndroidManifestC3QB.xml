@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.android.overlay.fog_india">
+    <overlay android:targetPackage="android"
+             android:isStatic="true"
+             android:priority="650"
+             android:requiredSystemPropertyName="ro.boot.product.hardware.sku"
+             android:requiredSystemPropertyValue="c3qb" />
+</manifest>
