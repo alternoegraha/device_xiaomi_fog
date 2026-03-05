@@ -23,7 +23,7 @@
     <dimen name="status_bar_padding_end">0px</dimen>
 
     <!-- rounded corner content padding -->
-    <dimen name="rounded_corner_content_padding">40px</dimen>
+    <dimen name="rounded_corner_content_padding">38px</dimen>
 
     <!-- Margin on the left side of the carrier text on Keyguard -->
     <dimen name="keyguard_carrier_text_margin">@dimen/status_bar_padding_start</dimen>
