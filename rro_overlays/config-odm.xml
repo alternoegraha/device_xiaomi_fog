@@ -4,7 +4,6 @@
 -->
 <config>
     <overlay package="com.android.overlay.fog" mutable="false" enabled="true" />
-    <overlay package="com.android.overlay.fog_in" mutable="false" enabled="true" />
     <overlay package="com.android.overlay.fog_power" mutable="false" enabled="true" />
     <overlay package="com.android.providers.settings.overlay.fog" mutable="false" enabled="true" />
     <overlay package="com.android.providers.settings.overlay.fog_in" mutable="false" enabled="true" />
