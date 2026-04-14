@@ -1,11 +1,9 @@
-runtime_resource_overlay {
-    name: "FogFrameworksOverlay",
-    manifest: "AndroidManifest.xml",
-    device_specific: true,
-}
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
 
 runtime_resource_overlay {
-    name: "FogFrameworksOverlayIN",
-    manifest: "AndroidManifestC3QB.xml",
+    name: "FogFrameworksOverlay",
     device_specific: true,
 }
