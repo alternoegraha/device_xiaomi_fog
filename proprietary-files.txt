@@ -743,10 +743,7 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # IMS - from MIUI
--system_ext/app/ImsRcsService/ImsRcsService.apk
--system_ext/app/uceShimService/uceShimService.apk
 -system_ext/priv-app/ims/ims.apk
-system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
