@@ -16,6 +16,9 @@
     <!-- rounded corner content padding -->
     <dimen name="rounded_corner_content_padding">38px</dimen>
 
+    <!-- Height of the status bar header bar when on Keyguard -->
+    <dimen name="status_bar_header_height_keyguard">@*android:dimen/status_bar_height</dimen>
+
     <!-- the padding on the end of the statusbar -->
     <dimen name="status_bar_padding_end">0px</dimen>
 
