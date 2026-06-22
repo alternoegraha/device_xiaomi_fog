@@ -24,6 +24,12 @@ allow hal_fingerprint_default {
 }: dir r_dir_perms;
 
 allow hal_fingerprint_default {
+  sysfs_leds
+  sysfs_rtc
+  vendor_sysfs_fingerprint
+}: dir { search open };
+
+allow hal_fingerprint_default {
   vendor_sysfs_fingerprint
   vendor_sysfs_graphics
   sysfs_msm_subsys
@@ -35,7 +41,6 @@ get_prop(system_server, vendor_fp_prop)
 get_prop(hal_fingerprint_default, vendor_fp_prop)
 set_prop(hal_fingerprint_default, vendor_fp_prop)
 
-allow hal_fingerprint_default vendor_sysfs_fingerprint:dir { search open };
 allow hal_fingerprint_default vendor_sysfs_spss:dir { search };
 allow hal_fingerprint_default vendor_sysfs_spss:file { open read };
 allow hal_fingerprint_default sysfs:file { write };
