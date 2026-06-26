@@ -177,10 +177,6 @@ PRODUCT_PACKAGES += \
     libcrypto_shim \
     libcrypto_shim.vendor
 
-# Fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi \
