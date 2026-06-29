@@ -364,7 +364,6 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FogCarrierConfigOverlay \
-    FogDialerOverlay \
     FogLineageSDKOverlay \
     FogNoCutoutOverlay \
     FogSettingsOverlay \
