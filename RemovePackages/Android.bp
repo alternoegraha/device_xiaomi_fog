@@ -1,0 +1,14 @@
+cc_prebuilt_binary {
+    check_elf_files: false,
+    name: "RemovePackagesFog",
+    overrides: [
+        "PrebuiltGmail",
+        "Maps",
+        "PlayAutoInstallConfig",
+    ],
+    strip: {
+        none: true,
+    },
+    system_ext_specific: true,
+    srcs: ["RemovePackagesFog"],
+}
