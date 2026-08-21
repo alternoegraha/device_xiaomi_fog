@@ -133,10 +133,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
-# Configstore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # Dex/ART optimization
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed-profile
@@ -181,10 +177,6 @@ PRODUCT_PACKAGES += \
     libcrypto_shim \
     libcrypto_shim.vendor
 
-# Fastbootd
-PRODUCT_PACKAGES += \
-    fastbootd
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi \
@@ -214,14 +206,11 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-impl.recovery \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.1.vendor \
+    android.hardware.health-service.qti
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0.vendor \
     libhidltransport.vendor \
     libhwbinder.vendor
 
@@ -232,6 +221,9 @@ PRODUCT_COPY_FILES += \
 # IFAA manager
 PRODUCT_PACKAGES += \
     IFAAService
+
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -471,7 +463,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
-    hardware/google/pixel \
+    hardware/google/pixel/power-libperfmgr \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi \

@@ -1,0 +1,2 @@
+allow mediaserver sysfs_msm_subsys:dir search;
+allow mediaserver sysfs_msm_subsys:file r_file_perms;
