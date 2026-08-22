@@ -12,6 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_SUPPORTS_QUICK_TAP := false
+WITH_GMS_AICORE := false
 
 # Inherit from fog device
 $(call inherit-product, device/xiaomi/fog/device.mk)
