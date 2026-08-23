@@ -3,6 +3,11 @@ cc_prebuilt_binary {
     name: "RemovePackagesFog",
     overrides: [
         "PrebuiltGmail",
+        "WallpaperAIPrebuilt_10000372",
+        "PixelLiveWallpaperPrebuilt-26000013",
+        "PixelWallpapers2025",
+        "WallpaperEffect",
+        "MagicPortraitWallpapers",
         "Maps",
         "PlayAutoInstallConfig",
     ],
