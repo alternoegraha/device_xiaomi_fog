@@ -1,7 +1,9 @@
 # Battery health
-genfscon sysfs /class/power_supply/battery/capacity                                                 u:object_r:vendor_sysfs_battery_supply:s0
-genfscon sysfs /class/power_supply/bms                                                              u:object_r:vendor_sysfs_battery_supply:s0
-genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0055/power_supply/bms(/.*)?                u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/power_supply/battery/capacity                                           u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/power_supply/bms(/.*)?                                                  u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0055/power_supply/bms(/.*)?          u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4a88000.i2c/i2c-1/1-0055/power_supply/battery            u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4a88000.i2c/i2c-1/1-0055/power_supply/usb                u:object_r:vendor_sysfs_usb_supply:s0
 
 # DSP
 genfscon sysfs /kernel/boot_cdsp/boot                                           u:object_r:sysfs_msm_boot:s0
