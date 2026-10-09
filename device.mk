@@ -54,6 +54,17 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libstagefright_softomx_plugin.vendor \
     libtinycompress \
+    libsndmonitor \
+    libcomprcapture \
+    libssrec \
+    libhdmiedid \
+    libspkrprot \
+    libcirrusspkrprot \
+    liba2dpoffload \
+    libexthwplugin \
+    libhfp \
+    libbatterylistener \
+    audio.primary.bengal \
     sound_trigger.primary.bengal
 
 # Audio Daemon
